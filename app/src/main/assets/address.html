@@ -1,0 +1,502 @@
+<!--
+HTTP/1.1 200 OK
+Server: nginx/1.7.7
+Date: Thu, 22 Oct 2015 03:19:51 GMT
+Content-Type: text/html; charset=utf-8
+Connection: close
+Status: 200 OK
+X-UA-Compatible: IE=Edge,chrome=1
+ETag: "c4774579485032ed31782d889244a8cb"
+Cache-Control: must-revalidate, private, max-age=0
+Set-Cookie: _redmine_session=BAh7DEkiDHVzZXJfaWQGOgZFRmlxSSIKY3RpbWUGOwBGbCsHV1IoVkkiCmF0aW1lBjsARmwrB9dVKFZJIg9zZXNzaW9uX2lkBjsAVEkiJWZiYTQ5ZmZkYzYxNGE1MDc1YjUzMWI3ZDg2MGRmZWVmBjsAVEkiEF9jc3JmX3Rva2VuBjsARkkiMTJKMHhXRktLUVVXME0xRndBZGxwSkpwcEMrRTZVZEJIbGM5WDRldlhLNU09BjsARkkiHWFkZHJlc3NfYm9va3NfaW5kZXhfc29ydAY7AEZJIgpsb2dpbgY7AFRJIgpxdWVyeQY7AEZ7CToPcHJvamVjdF9pZGkGOgxmaWx0ZXJzewZJIg5zdGF0dXNfaWQGOwBUewc6DW9wZXJhdG9ySSIGbwY7AFQ6C3ZhbHVlc1sGSSIABjsAVDoNZ3JvdXBfYnkwOhFjb2x1bW5fbmFtZXMw&#45;&#45;fea6bd9fde3d90cffbbcfa7187b69ca1e8fd2ae8; path=/; HttpOnly
+X-Request-Id: a425f9f102a1b40fa6f5d321c064abd5
+X-Runtime: 0.119292
+X-Rack-Cache: miss
+-->
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8" />
+    <title>通讯录 - Work@极客学院</title>
+    <meta name="description" content="Redmine" />
+    <meta name="keywords" content="issue,bug,tracker" />
+    <meta content="authenticity_token" name="csrf-param" />
+    <meta content="2J0xWFKKQUW0M1FwAdlpJJppC+E6UdBHlc9X4evXK5M=" name="csrf-token" />
+    <link rel='shortcut icon' href='/favicon.ico?1413918791' />
+    <link href="/stylesheets/jquery/jquery-ui-1.11.0.css?1413918791" media="all" rel="stylesheet" type="text/css" />
+    <link href="/themes/alternate/stylesheets/application.css?1413918791" media="all" rel="stylesheet" type="text/css" />
+
+    <script src="/javascripts/jquery-1.11.1-ui-1.11.0-ujs-3.1.1.js?1413918791" type="text/javascript"></script>
+    <script src="/javascripts/application.js?1413918791" type="text/javascript"></script>
+    <script type="text/javascript">
+//<![CDATA[
+$(window).load(function(){ warnLeavingUnsaved('若离开当前页面，则该页面内未保存的内容将丢失。'); });
+//]]>
+</script>
+
+
+    <!-- page specific tags -->
+</head>
+<body class="theme-Alternate controller-address_books action-index">
+<div id="wrapper">
+    <div id="wrapper2">
+        <div id="wrapper3">
+            <div id="top-menu">
+                <div id="account">
+                    <ul><li><a href="/my/account" class="my-account">我的帐号</a></li>
+                        <li><a href="/logout" class="logout" data-method="post" rel="nofollow">退出</a></li></ul>    </div>
+                <div id="loggedas">登录为 <a href="/users/108" class="user active">wuchaobin</a></div>
+                <ul><li><a href="/" class="home">主页</a></li>
+                    <li><a href="/my/page" class="my-page">我的工作台</a></li>
+                    <li><a href="/projects" class="projects">项目</a></li>
+                    <li><a href="/address_books" class="address-books selected">通讯录</a></li>
+                    <li><a href="/courses" class="courses">课程</a></li>
+                    <li><a href="/projects/jikexueyuan/wiki" class="wiki">Wiki</a></li>
+                    <li><a href="/projects/jikexueyuan/boards" class="board">讨论区</a></li>
+                    <li><a href="/worklogs" class="worklogs">工作日志</a></li>
+                    <li><a href="http://www.redmine.org/guide" class="help">帮助</a></li></ul></div>
+
+            <div id="header">
+                <div id="quick-search">
+                    <form accept-charset="UTF-8" action="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+                        <label for='q'>
+                            <a href="/search" accesskey="4">搜索</a>:
+                        </label>
+                        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+                    </form>        <select id="project_quick_jump_box" name="project_quick_jump_box" onchange="if (this.value != &#x27;&#x27;) { window.location = this.value; }"><option value=''>选择一个项目...</option><option value="" disabled="disabled">---</option><option value="/projects/jikexueyuan?jump=address_books">极客学院</option><option value="/projects/admin?jump=address_books">&nbsp;&nbsp;&#187; Admin</option><option value="/projects/moniu?jump=address_books">&nbsp;&nbsp;&#187; App</option><option value="/projects/android?jump=address_books">&nbsp;&nbsp;&nbsp;&nbsp;&#187; Android</option><option value="/projects/app_api?jump=address_books">&nbsp;&nbsp;&nbsp;&nbsp;&#187; app_api</option><option value="/projects/ios?jump=address_books">&nbsp;&nbsp;&nbsp;&nbsp;&#187; iOS</option><option value="/projects/moniv?jump=address_books">&nbsp;&nbsp;&nbsp;&nbsp;&#187; iPad</option><option value="/projects/core-api?jump=address_books">&nbsp;&nbsp;&#187; CoreApi</option><option value="/projects/download?jump=address_books">&nbsp;&nbsp;&#187; download</option><option value="/projects/eoeandroid_com?jump=address_books">&nbsp;&nbsp;&#187; eoeAndroid</option><option value="/projects/huodong?jump=address_books">&nbsp;&nbsp;&#187; Huodong</option><option value="/projects/message?jump=address_books">&nbsp;&nbsp;&#187; Message</option><option value="/projects/my?jump=address_books">&nbsp;&nbsp;&#187; My</option><option value="/projects/m?jump=address_books">&nbsp;&nbsp;&#187; M版</option><option value="/projects/passpt?jump=address_books">&nbsp;&nbsp;&#187; Passport</option><option value="/projects/pay?jump=address_books">&nbsp;&nbsp;&#187; Pay</option><option value="/projects/wenda?jump=address_books">&nbsp;&nbsp;&#187; wenda</option><option value="/projects/ws?jump=address_books">&nbsp;&nbsp;&#187; WS</option><option value="/projects/www?jump=address_books">&nbsp;&nbsp;&#187; www</option><option value="/projects/zhiye2?jump=address_books">&nbsp;&nbsp;&#187; zhiye2</option><option value="/projects/stat?jump=address_books">&nbsp;&nbsp;&#187; 数据系统</option><option value="/projects/pub?jump=address_books">&nbsp;&nbsp;&#187; 极客出版社</option><option value="/projects/labs?jump=address_books">&nbsp;&nbsp;&#187; 极客实验室</option><option value="/projects/chat?jump=address_books">&nbsp;&nbsp;&nbsp;&nbsp;&#187; jikeChat</option><option value="/projects/passporu?jump=address_books">&nbsp;&nbsp;&#187; 运维相关</option><option value="/projects/tools?jump=address_books">&nbsp;&nbsp;&#187; 运营工具</option><option value="/projects/doit?jump=address_books">&nbsp;&nbsp;&#187; 非研发性需求</option></select>
+                </div>
+
+                <h1>Work@极客学院</h1>
+
+            </div>
+
+            <div id="main" class="nosidebar">
+                <div id="sidebar">
+
+
+                </div>
+
+                <div id="content">
+
+                    <div class="contextual">
+                        <a href="/my/account" class="icon icon-edit">我的通讯信息</a>
+                    </div>
+
+                    <h2>通讯录</h2>
+
+
+
+                    <div class="autoscroll">
+                        <table class="list">
+                            <thead><tr>
+                                <th title="根据 &quot;登录名&quot; 排序"><a href="/address_books?sort=login%3Adesc" class="sort asc">登录名</a></th>
+                                <th title="根据 &quot;邮件地址&quot; 排序"><a href="/address_books?sort=mail%2Clogin">邮件地址</a></th>
+                                <th title="根据 &quot;手机号码&quot; 排序"><a href="/address_books?sort=%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%2Clogin">手机号码</a></th>
+                                <th title="根据 &quot;Qq&quot; 排序"><a href="/address_books?sort=QQ%2Clogin">Qq</a></th>
+                                <th title="根据 &quot;微信号&quot; 排序"><a href="/address_books?sort=%E5%BE%AE%E4%BF%A1%E5%8F%B7%2Clogin">微信号</a></th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/148">小 白</a></td>
+                                <td class="email"><a href="mailto:baiweilong@jikexueyuan.com">baiweilong@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18612711983
+                                </td>
+                                <td align="center">
+                                    86745239
+                                </td>
+                                <td align="center">
+                                    18612711983
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/63">冯 天锡</a></td>
+                                <td class="email"><a href="mailto:fengtianxi@jikexueyuan.com">fengtianxi@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    13520379740
+                                </td>
+                                <td align="center">
+                                    380595717
+                                </td>
+                                <td align="center">
+                                    hqr006
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/167">杜 新龙</a></td>
+                                <td class="email"><a href="mailto:duxinlong@jikexueyuan.com">duxinlong@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18792542537
+                                </td>
+                                <td align="center">
+                                    760283025
+                                </td>
+                                <td align="center">
+                                    cabuda2
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/98">蔡 格格</a></td>
+                                <td class="email"><a href="mailto:caigege@jikexueyuan.com">caigege@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18811789037
+                                </td>
+                                <td align="center">
+                                    1576489980
+                                </td>
+                                <td align="center">
+                                    cggloch
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/35">曹 江涛</a></td>
+                                <td class="email"><a href="mailto:chaojiangtao@jikexueyuan.com">chaojiangtao@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    15101158039
+                                </td>
+                                <td align="center">
+                                    273369353
+                                </td>
+                                <td align="center">
+                                    caojiangtao007
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/23">陈 红</a></td>
+                                <td class="email"><a href="mailto:chenhong@jikexueyuan.com">chenhong@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    13651084263
+                                </td>
+                                <td align="center">
+                                    570148180
+                                </td>
+                                <td align="center">
+                                    q570148180
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/22">陈 少佳</a></td>
+                                <td class="email"><a href="mailto:chenshaojia@jikexueyuan.com">chenshaojia@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    15210669918
+                                </td>
+                                <td align="center">
+                                    523108428
+                                </td>
+                                <td align="center">
+                                    xtiqin
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/124">陈 文龙</a></td>
+                                <td class="email"><a href="mailto:chenwenlong@jikexueyuan.com">chenwenlong@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    13611159264
+                                </td>
+                                <td align="center">
+                                    2560733441
+                                </td>
+                                <td align="center">
+                                    13611159264
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/109">赵 春玲</a></td>
+                                <td class="email"><a href="mailto:zhaochunling@jikexueyuan.com">zhaochunling@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    15011595186
+                                </td>
+                                <td align="center">
+                                    2300498747
+                                </td>
+                                <td align="center">
+                                    自由的风
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/175">董 策</a></td>
+                                <td class="email"><a href="mailto:dongce@jikexueyuan.com">dongce@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    15110048346
+                                </td>
+                                <td align="center">
+                                    896505009
+                                </td>
+                                <td align="center">
+                                    doncc_816
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/10">房 亚飞</a></td>
+                                <td class="email"><a href="mailto:fangyafei@eoemobile.com">fangyafei@eoemobile.com</a></td>
+
+                                <td align="center">
+                                    185 1336 1320
+                                </td>
+                                <td align="center">
+                                    1120309265
+                                </td>
+                                <td align="center">
+                                    fangyafei5017
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/55">樊 连杰</a></td>
+                                <td class="email"><a href="mailto:fanlianjie8556@163.com">fanlianjie8556@163.com</a></td>
+
+                                <td align="center">
+                                    18613804329
+                                </td>
+                                <td align="center">
+                                    411243378
+                                </td>
+                                <td align="center">
+                                    flj19850506
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/151">郜 艳超</a></td>
+                                <td class="email"><a href="mailto:gaoyanchao@jikexueyuan.com">gaoyanchao@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    13810446878
+                                </td>
+                                <td align="center">
+                                    31449662
+                                </td>
+                                <td align="center">
+                                    dotey8
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/65">耿 磊</a></td>
+                                <td class="email"><a href="mailto:genglei@jikexueyuan.com">genglei@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18669755121
+                                </td>
+                                <td align="center">
+                                    278989447
+                                </td>
+                                <td align="center">
+                                    tiandinanyu
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/184">龚 威</a></td>
+                                <td class="email"><a href="mailto:gongwei@jikexueyuan.com">gongwei@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    15810115449
+                                </td>
+                                <td align="center">
+                                    1959627554
+                                </td>
+                                <td align="center">
+                                    gongwei8401
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/103">龚 有三</a></td>
+                                <td class="email"><a href="mailto:gongyousan@jikexueyuan.com">gongyousan@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18210150589
+                                </td>
+                                <td align="center">
+                                    81761853
+                                </td>
+                                <td align="center">
+                                    gongyousan
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/37">郭 冰叶</a></td>
+                                <td class="email"><a href="mailto:guobingye@jikexueyuan.com">guobingye@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    13720073919
+                                </td>
+                                <td align="center">
+                                    2456159762
+                                </td>
+                                <td align="center">
+                                    vincy822
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/71">郭 丽娜</a></td>
+                                <td class="email"><a href="mailto:lnguo2011@163.com">lnguo2011@163.com</a></td>
+
+                                <td align="center">
+                                    18210255623
+                                </td>
+                                <td align="center">
+                                    1977291276
+                                </td>
+                                <td align="center">
+                                    1977291276
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/150">韩 海龙</a></td>
+                                <td class="email"><a href="mailto:hanhailong@jikexueyuan.com">hanhailong@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    15810857061
+                                </td>
+                                <td align="center">
+                                    826605224
+                                </td>
+                                <td align="center">
+                                    wx826605224
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/82">韩 帅</a></td>
+                                <td class="email"><a href="mailto:hanshuai@jikexueyuan.com">hanshuai@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18211155189
+                                </td>
+                                <td align="center">
+                                    844060871
+                                </td>
+                                <td align="center">
+                                    844060871
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/157">郝 朝斐</a></td>
+                                <td class="email"><a href="mailto:haochaofei@jikexueyuan.com">haochaofei@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18911815590
+                                </td>
+                                <td align="center">
+                                    994779881
+                                </td>
+                                <td align="center">
+                                    994779881
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/116">侯 华勇</a></td>
+                                <td class="email"><a href="mailto:houhuayong@jikexueyuan.com">houhuayong@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18500684254
+                                </td>
+                                <td align="center">
+                                    307924539
+                                </td>
+                                <td align="center">
+                                    307924539
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/171">黄 正林</a></td>
+                                <td class="email"><a href="mailto:huangzhenglin@jikexueyuan.com">huangzhenglin@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    13117914120
+                                </td>
+                                <td align="center">
+                                    845574604
+                                </td>
+                                <td align="center">
+                                    mumu3160
+                                </td>
+
+                            </tr>
+                            <tr class="user active even">
+                                <td class="username"><a href="/users/5">姚 尚朗</a></td>
+                                <td class="email"><a href="mailto:iceskysl@jikexueyuan.com">iceskysl@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18618288603
+                                </td>
+                                <td align="center">
+                                    19089176
+                                </td>
+                                <td align="center">
+                                    iceskysl
+                                </td>
+
+                            </tr>
+                            <tr class="user active odd">
+                                <td class="username"><a href="/users/105">焦 艳艳</a></td>
+                                <td class="email"><a href="mailto:jiaoyanyan@jikexueyuan.com">jiaoyanyan@jikexueyuan.com</a></td>
+
+                                <td align="center">
+                                    18811405048
+                                </td>
+                                <td align="center">
+                                    2515149112
+                                </td>
+                                <td align="center">
+                                    18811405048
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="pagination"><span class="current page">1</span> <a href="/address_books?page=2" class="page">2</a> <a href="/address_books?page=3" class="page">3</a> <span class="spacer">...</span> <a href="/address_books?page=5" class="page">5</a> <a href="/address_books?page=2" class="next">下一页 »</a> <span class="items">(1-25/108)</span> <span class="per-page">每页显示：<span>25</span>, <a href="/address_books?per_page=50">50</a>, <a href="/address_books?per_page=100">100</a></span></p>
+
+
+
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ajax-indicator" style="display:none;"><span>载入中...</span></div>
+        <div id="ajax-modal" style="display:none;"></div>
+
+        <div id="footer">
+            <div class="bgl"><div class="bgr">
+                Powered by <a href="http://www.redmine.org/">Redmine</a> &copy; 2006-2014 Jean-Philippe Lang
+            </div></div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
