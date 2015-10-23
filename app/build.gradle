@@ -1,3 +1,4 @@
+apply from: 'config.gradle'
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
@@ -11,7 +12,10 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        buildConfigField "String", "USER_NAME", "\"$userName\""
+        buildConfigField "String", "PASSWORD", "\"$password\""
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -26,14 +30,15 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.android.support:design:23.1.0'
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
-    androidTestCompile 'com.squareup.retrofit:retrofit-mock:2.0.0-beta2'
     compile 'org.jsoup:jsoup:1.8.3'
+    //    compile 'com.github.avenwu:support:0.1.0'
+    compile 'com.android.support:cardview-v7:23.1.0'
 }
+
 buildscript {
     ext.kotlin_version = '1.0.0-beta-1038'
     repositories {

@@ -2,6 +2,7 @@ package com.jikexueyuan.mobile.address;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
+import android.text.TextUtils;
 import android.util.Log;
 
 import com.jikexueyuan.mobile.address.bean.User;
@@ -19,6 +20,7 @@ import java.net.CookieManager;
 import java.net.CookiePolicy;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import retrofit.Call;
 import retrofit.Response;
@@ -38,17 +40,19 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     Retrofit retrofit;
     ApiService api;
     //TODO remove
-    String username = "";
-    String password = "";
+    String username = BuildConfig.USER_NAME;
+    String password = BuildConfig.PASSWORD;
 
     public ApplicationTest() {
         super(Application.class);
         CookieManager cookieManager = new CookieManager();
         cookieManager.setCookiePolicy(CookiePolicy.ACCEPT_ALL);
         CookieHandler.setDefault(cookieManager);
-
+        OkHttpClient client = new OkHttpClient();
+        client.setConnectTimeout(client.getConnectTimeout() * 2, TimeUnit.MILLISECONDS);
         retrofit = new Retrofit.Builder().baseUrl("http://work.eoemobile.com")
                 .addConverterFactory(new StringConvertFactory())
+                .client(client)
                 .build();
         api = retrofit.create(ApiService.class);
     }
@@ -75,6 +79,8 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         call = api.login("✓", content, username, password, "Login »");
         response = call.execute();
         assertNotNull(response);
+        assertEquals(200, response.code());
+        assertFalse(TextUtils.isEmpty(response.headers().get("Set-Cookie")));
         Log.e("HTML", response.body());
 
         call = api.addressBooks(1, 20);

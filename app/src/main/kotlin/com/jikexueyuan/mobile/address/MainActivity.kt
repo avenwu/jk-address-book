@@ -1,32 +1,88 @@
 package com.jikexueyuan.mobile.address
 
+import android.app.usage.NetworkStatsManager
+import android.os.AsyncTask
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.Toolbar
-import android.view.View
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Toast
 import com.jikexueyuan.mobile.address.bean.User
-import kotlinx.android.synthetic.activity_main.*
+import kotlinx.android.synthetic.activity_main.fab
+import kotlinx.android.synthetic.content_main.recyclerView
+import java.lang.ref.WeakReference
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    internal var taskList = ArrayList<WeakReference<AsyncTask<*, *, *>>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
-        fab.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(view: View) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show()
-            }
+        fab.setOnClickListener({ view ->
+            snackBar("Replace with your own action")
         })
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        recyclerView.adapter = AddressBookAdapter()
+
+        if (isNetWorkAvailable(this)) {
+            enqueue(AppService.login(BuildConfig.USER_NAME, BuildConfig.PASSWORD, { success ->
+                if (success) {
+                    snackBar("登录成功，正在快马加鞭获取联系人。。。")
+                    enqueue(AppService.getAddressBookByPage(1, { data ->
+                        if (data.userList == null) {
+                            snackBar("网络不给力，找不到联系人")
+                        } else {
+                            snackBar("已获取${data.totalCount}条联系人数据")
+                            (recyclerView.adapter as AddressBookAdapter).addUsers(data.userList)
+                            saveUserList2Cache(this, (recyclerView.adapter as AddressBookAdapter).userList)
+                        }
+                    }))
+                } else {
+                    snackBar("这位壮士，登录不成功啊")
+                }
+            }))
+        } else {
+            getUserListFromCache(this, object : AppService.Block<List<User>> {
+                override fun onCallback(data: List<User>) {
+                    (recyclerView.adapter as AddressBookAdapter).addUsers(data)
+                }
+            })
+        }
 
     }
 
+    fun snackBar(text: CharSequence, listener: View.OnClickListener? = null) {
+        Snackbar.make(fab, text, Snackbar.LENGTH_LONG).setAction("Action", listener).show()
+    }
+
+    fun toast(text: CharSequence) {
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+    }
+
+    fun enqueue(task: AsyncTask<*, *, *>) {
+        taskList.add(WeakReference(task))
+    }
+
+    fun dequeue() {
+        for (task in taskList) {
+            task.get()?.cancel(true)
+        }
+        taskList.clear()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dequeue()
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
