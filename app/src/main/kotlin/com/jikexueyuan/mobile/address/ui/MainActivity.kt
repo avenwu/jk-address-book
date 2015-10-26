@@ -14,6 +14,7 @@ import com.jikexueyuan.mobile.address.*
 import com.jikexueyuan.mobile.address.api.AppService
 import kotlinx.android.synthetic.activity_main.fab
 import kotlinx.android.synthetic.content_main.recyclerView
+import kotlinx.android.synthetic.content_main.progress
 import java.lang.ref.WeakReference
 import java.util.*
 
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         })
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         recyclerView.adapter = AddressBookAdapter()
+        progress.visibility = View.VISIBLE
 
         if (isNetWorkAvailable(this)) {
             enqueue(AppService.login(BuildConfig.USER_NAME, BuildConfig.PASSWORD, { success ->
@@ -39,18 +41,21 @@ class MainActivity : AppCompatActivity() {
                         if (data.userList == null) {
                             snackBar("网络不给力，找不到联系人")
                         } else {
-                            snackBar("已获取${data.totalCount}条联系人数据")
+                            snackBar("可获取${data.totalCount}条联系人数据")
                             (recyclerView.adapter as AddressBookAdapter).addUsers(data.userList)
                             saveUserList2Cache(this, (recyclerView.adapter as AddressBookAdapter).userList)
+                            progress.visibility = View.GONE
                         }
                     }))
                 } else {
                     snackBar("这位壮士，登录不成功啊")
+                    progress.visibility = View.GONE
                 }
             }))
         } else {
             getUserListFromCache(this, { data ->
                 (recyclerView.adapter as AddressBookAdapter).addUsers(data)
+                progress.visibility = View.GONE
             })
         }
 

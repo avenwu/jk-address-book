@@ -15,3 +15,20 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontwarn kotlin.**
+-dontwarn org.w3c.dom.events.*
+-dontwarn org.jetbrains.kotlin.di.InjectorForRuntimeDescriptorLoader
+
+# retrofit specific
+-dontwarn retrofit.**
+-keep class retrofit.** { *; }
+-keepattributes Signature
+-keepattributes Exceptions
+-dontwarn com.squareup.okhttp.**
+
+-keepclasseswithmembers class * {
+    @retrofit.http.* <methods>;
+}
+-keep public class com.jikexueyuan.mobile.address.R$*{
+    public static final int *;
+}

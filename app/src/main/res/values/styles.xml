@@ -35,5 +35,9 @@
         <item name="android:background">@drawable/address_cell_selector</item>
         <item name="android:clickable">true</item>
     </style>
+    <declare-styleable name="TintProgressBar">
+        <attr name="progress_src" format="reference"/>
+        <attr name="progress_tint" format="reference|color"/>
+    </declare-styleable>
 </resources>
 

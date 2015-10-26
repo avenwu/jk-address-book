@@ -1,14 +1,15 @@
 package com.jikexueyuan.mobile.address.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.Toolbar
+import android.view.View
+import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
-import com.jikexueyuan.mobile.address.R
-import com.jikexueyuan.mobile.address.json2User
+import com.jikexueyuan.mobile.address.*
 import kotlinx.android.synthetic.content_user_detail.*
 
 class UserDetailActivity : AppCompatActivity() {
@@ -28,17 +29,25 @@ class UserDetailActivity : AppCompatActivity() {
         user?.let {
             user_name.text = user.username
             email.text = user.email
+            bindAction(email.parent as View, ::sendEmail)
+
             phone.text = user.phone
+            bindAction(phone.parent as View, ::makeCall)
+
             qq.text = user.qq
+            bindAction(qq.parent as View, ::openQQ)
+
             wechat.text = user.wechat
+            bindAction(wechat.parent as View, ::openWeChat)
         }
     }
 
-    fun setCopyListener(textView: TextView) {
-        textView.setOnLongClickListener({ v ->
-            Toast.makeText(v?.context, "Long click:$v", Toast.LENGTH_SHORT).show()
-            true
+    fun bindAction(v: View, block: (Context, CharSequence) -> Unit) {
+        v.setOnClickListener({ v ->
+            var label = (v as ViewGroup).getChildAt(1)
+            if (label is TextView) {
+                block(label.context, label.text)
+            }
         })
     }
-
 }
