@@ -44,6 +44,11 @@ class AddressBookAdapter : RecyclerView.Adapter<AddressBookAdapter.ViewHolder>()
         notifyDataSetChanged()
     }
 
+    fun clear() {
+        userList.clear()
+        notifyDataSetChanged()
+    }
+
     internal class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var shorthand: TextView
         var username: TextView

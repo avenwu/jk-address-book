@@ -41,6 +41,7 @@ public class TintProgressBar extends View {
     int mDrawableWidth;
     int mDrawableHeight;
     ObjectAnimator mAnimator;
+    boolean mRefresh = false;
 
     public TintProgressBar(Context context) {
         this(context, null);
@@ -67,19 +68,31 @@ public class TintProgressBar extends View {
         mAnimator.setInterpolator(new LinearInterpolator());
     }
 
+    public void setRefreshing(boolean refresh) {
+        mRefresh = refresh;
+        if (refresh) {
+            mAnimator.removeAllUpdateListeners();
+            mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+                @Override
+                public void onAnimationUpdate(ValueAnimator animation) {
+                    if (getVisibility() == VISIBLE && mRefresh) {
+                        invalidate();
+                    }
+                }
+            });
+            mAnimator.start();
+        } else {
+            mAnimator.end();
+            mAnimator.removeAllUpdateListeners();
+        }
+    }
+
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
-        mAnimator.removeAllUpdateListeners();
-        mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-            @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
-                if (getVisibility() == VISIBLE) {
-                    invalidate();
-                }
-            }
-        });
-        mAnimator.start();
+        if (mRefresh) {
+            setRefreshing(true);
+        }
     }
 
     @Override

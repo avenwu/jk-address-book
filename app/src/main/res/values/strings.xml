@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">极客通讯录</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_update">更新</string>
     <string name="title_activity_user_detail">UserDetailActivity</string>
 </resources>

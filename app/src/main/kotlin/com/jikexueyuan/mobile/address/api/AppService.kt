@@ -21,6 +21,7 @@ import java.util.concurrent.TimeUnit
  */
 object AppService {
     private val api: API
+    public val PAGE_COUNT = 20
 
     init {
         val cookieManager = CookieManager()
@@ -42,7 +43,7 @@ object AppService {
                 var page = params[0] ?: 0
                 var result: AddressBook
                 try {
-                    val call = api.addressBooks(page, 20)
+                    val call = api.addressBooks(page, PAGE_COUNT)
                     val response = call.execute()
                     //User Info
                     val document = Jsoup.parse(response.body(), "UTF-8")
