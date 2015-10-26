@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.jikexueyuan.mobile.address.UserDetailActivity"
+    tools:context="com.jikexueyuan.mobile.address.ui.UserDetailActivity"
     tools:showIn="@layout/activity_user_detail">
 
     <ImageView

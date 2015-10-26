@@ -2,6 +2,8 @@ package com.jikexueyuan.mobile.address;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.view.View;
+import android.widget.TextView;
 
 import com.jikexueyuan.mobile.address.bean.User;
 
@@ -29,6 +31,15 @@ public class Test {
         String wechat;
 
 
+    }
+
+    public void set(TextView view) {
+        view.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                return false;
+            }
+        });
     }
 }
 

@@ -36,7 +36,7 @@ public fun saveUserList2Cache(context: Context, list: List<User>) {
     }, context, list)
 }
 
-public fun getUserListFromCache(context: Context, listener: AppService.Block<List<User>>) {
+public fun getUserListFromCache(context: Context, listener: (List<User>) -> Unit) {
     AsyncTaskCompat.executeParallel(object : AsyncTask<Any, Void, List<User>>() {
         override fun doInBackground(vararg params: Any?): List<User>? {
             var dataList: List<User> = emptyList()
@@ -53,9 +53,9 @@ public fun getUserListFromCache(context: Context, listener: AppService.Block<Lis
             return dataList
         }
 
-        override fun onPostExecute(result: List<User>?) {
+        override fun onPostExecute(result: List<User>) {
             super.onPostExecute(result)
-            listener.onCallback(result)
+            listener(result)
         }
     }, context)
 }

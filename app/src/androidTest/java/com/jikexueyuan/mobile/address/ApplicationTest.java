@@ -5,8 +5,8 @@ import android.test.ApplicationTestCase;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.jikexueyuan.mobile.address.api.StringConvertFactory;
 import com.jikexueyuan.mobile.address.bean.User;
-import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
 
 import org.jsoup.Jsoup;
@@ -25,11 +25,9 @@ import java.util.concurrent.TimeUnit;
 import retrofit.Call;
 import retrofit.Response;
 import retrofit.Retrofit;
-import retrofit.http.Body;
 import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
-import retrofit.http.Header;
 import retrofit.http.POST;
 import retrofit.http.Query;
 

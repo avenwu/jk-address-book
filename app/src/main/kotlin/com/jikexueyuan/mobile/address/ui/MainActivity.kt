@@ -1,6 +1,5 @@
-package com.jikexueyuan.mobile.address
+package com.jikexueyuan.mobile.address.ui
 
-import android.app.usage.NetworkStatsManager
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.design.widget.Snackbar
@@ -11,7 +10,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import com.jikexueyuan.mobile.address.bean.User
+import com.jikexueyuan.mobile.address.*
+import com.jikexueyuan.mobile.address.api.AppService
 import kotlinx.android.synthetic.activity_main.fab
 import kotlinx.android.synthetic.content_main.recyclerView
 import java.lang.ref.WeakReference
@@ -49,10 +49,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }))
         } else {
-            getUserListFromCache(this, object : AppService.Block<List<User>> {
-                override fun onCallback(data: List<User>) {
-                    (recyclerView.adapter as AddressBookAdapter).addUsers(data)
-                }
+            getUserListFromCache(this, { data ->
+                (recyclerView.adapter as AddressBookAdapter).addUsers(data)
             })
         }
 
