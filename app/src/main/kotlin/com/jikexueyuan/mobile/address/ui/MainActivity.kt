@@ -47,16 +47,7 @@ class MainActivity : AppCompatActivity() {
                 progress.visibility = View.GONE
             }
             if (isNetWorkAvailable(this)) {
-                enqueue(AppService.login(BuildConfig.USER_NAME, BuildConfig.PASSWORD, { success ->
-                    if (success) {
-                        snackBar(R.string.receive_user_list)
-                        updateAddressBook(1)
-                    } else {
-                        snackBar(R.string.login_failed)
-                        progress.setRefreshing(false)
-                        progress.visibility = View.GONE
-                    }
-                }))
+                updateAddressBook(1)
             }
         })
 
@@ -87,7 +78,11 @@ class MainActivity : AppCompatActivity() {
         Log.w("API", "current page=$p")
         enqueue(AppService.getAddressBookByPage(p, { data ->
             if (data.userList == null) {
-                snackBar(R.string.unable_to_find_user_data)
+                snackBar(R.string.unable_to_find_user_data, "重新登录", View.OnClickListener {
+                    startActivity(Intent(this, LoginActivity::class.java))
+                    updateLoginTimestamp(this, 0)
+                    finish()
+                })
                 saveUserList2Cache(this, getDataList(), ::skipSameUserFilter)
                 forceUpdate = false
                 progress.visibility = View.GONE
@@ -116,11 +111,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun snackBar(text: Int, action: String? = null, listener: View.OnClickListener? = null) {
-        var snackbar = Snackbar.make(fab, text, Snackbar.LENGTH_LONG)
+        var snackBar = Snackbar.make(fab, text, Snackbar.LENGTH_LONG)
         action?.let {
-            snackbar.setAction(action, listener)
+            snackBar.setAction(action, listener)
         }
-        snackbar.show()
+        snackBar.show()
     }
 
     fun enqueue(task: AsyncTask<*, *, *>) {

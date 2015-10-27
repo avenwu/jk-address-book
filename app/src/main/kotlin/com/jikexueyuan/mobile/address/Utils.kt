@@ -238,3 +238,12 @@ fun sortUserList(raw: List<User>, block: (List<User>) -> Unit) {
         }
     }, raw)
 }
+
+public fun updateLoginTimestamp(context: Context, mills: Long) {
+    var sp = context.getSharedPreferences("user_info", Context.MODE_PRIVATE)
+    sp.edit().putLong("login_timestamp", mills).apply()
+}
+
+public fun getLoginTimestamp(context: Context): Long {
+    return context.getSharedPreferences("user_info", Context.MODE_PRIVATE).getLong("login_timestamp", 0)
+}

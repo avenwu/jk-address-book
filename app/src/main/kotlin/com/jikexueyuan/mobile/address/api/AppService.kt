@@ -52,12 +52,16 @@ object AppService {
 
                     val userList = ArrayList<User>()
                     for (index in userTable.indices) {
-                        userList.add(parseUser(userTable, index))
+                        try {
+                            userList.add(parseUser(userTable, index))
+                        } catch(e: Throwable) {
+                            e.printStackTrace()
+                        }
                     }
                     val pages = document.select("p.pagination span.items").first().text()
                     val totalCount = pages.substring(pages.lastIndexOf("/") + 1, pages.lastIndexOf(")"))
                     result = AddressBook(userList, Integer.parseInt(totalCount), page)
-                } catch (e: IOException) {
+                } catch (e: Throwable) {
                     e.printStackTrace()
                     result = AddressBook(null, 0, page)
                 }
@@ -102,7 +106,7 @@ object AppService {
                     response = call.execute()
 
                     login = response.code() == 200 && !TextUtils.isEmpty(response.headers().get("Set-Cookie"))
-                } catch (e: IOException) {
+                } catch (e: Throwable) {
                     e.printStackTrace()
                     login = false
                 }
