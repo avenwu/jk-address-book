@@ -5,6 +5,7 @@ import android.support.v4.os.AsyncTaskCompat
 import android.text.TextUtils
 import com.jikexueyuan.mobile.address.bean.AddressBook
 import com.jikexueyuan.mobile.address.bean.User
+import com.jikexueyuan.mobile.address.chinese2Pinyin
 import com.squareup.okhttp.OkHttpClient
 import org.jsoup.Jsoup
 import org.jsoup.select.Elements
@@ -72,7 +73,9 @@ object AppService {
                 val phone = td[2].text()
                 val qq = td[3].text()
                 val wechat = td[4].text()
-                return User(username, email, phone, qq, wechat)
+                var pinyin = chinese2Pinyin(username.trim())
+
+                return User(username.trim(), email, phone, qq, wechat, pinyin)
             }
 
             override fun onPostExecute(addressBook: AddressBook) {

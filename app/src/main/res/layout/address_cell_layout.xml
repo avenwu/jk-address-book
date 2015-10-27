@@ -21,7 +21,6 @@
         android:singleLine="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textStyle="bold"
-        android:visibility="gone"
         android:textColor="#66000000"/>
 
     <ImageView

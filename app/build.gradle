@@ -35,8 +35,8 @@ dependencies {
     compile 'com.android.support:design:23.1.0'
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
     compile 'org.jsoup:jsoup:1.8.3'
-    //    compile 'com.github.avenwu:support:0.1.0'
     compile 'com.android.support:cardview-v7:23.1.0'
+    compile 'com.belerweb:pinyin4j:2.5.0'
 }
 
 buildscript {

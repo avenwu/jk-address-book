@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">极客通讯录</string>
     <string name="action_update">更新</string>
-    <string name="title_activity_user_detail">UserDetailActivity</string>
+    <string name="title_activity_user_detail">联系人信息</string>
+    <string name="import_tips">PS: 点击右下方按钮，可将联系人导入手机通讯录</string>
+    <string name="hint_qq">QQ</string>
+    <string name="hint_email">电子邮箱</string>
+    <string name="hint_wechat">微信</string>
+    <string name="hint_phone">电话号码</string>
+    <string name="no_address_booK_application_found">没有处理通讯录数据的应用</string>
+    <string name="unable_to_find_user_data">网络不给力，找不到联系人</string>
+    <string name="refreshing">正在刷新中</string>
+    <string name="login_failed">这位壮士，登录不成功啊</string>
+    <string name="receive_user_list">登录成功，正在快马加鞭获取联系人。。。</string>
+    <string name="got_N_users">更新了%1$d条联系人信息</string>
+    <string name="import_all_user_confirm">将所有联系人导入通讯录？</string>
+    <string name="no_users_can_not_import">没有联系人，不需要导入</string>
+    <string name="confirm">确定</string>
 </resources>

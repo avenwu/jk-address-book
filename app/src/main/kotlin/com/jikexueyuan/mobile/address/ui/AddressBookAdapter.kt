@@ -3,6 +3,7 @@ package com.jikexueyuan.mobile.address.ui
 import android.content.Context
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
+import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +28,24 @@ class AddressBookAdapter : RecyclerView.Adapter<AddressBookAdapter.ViewHolder>()
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = getUser(position)
         holder.username.text = user.username
-        holder.shorthand.text = "A"
+        if (TextUtils.isEmpty(user.pinying)) {
+            holder.shorthand.text = ""
+        } else {
+            holder.shorthand.text = user.pinying.subSequence(0, 1)
+        }
+
+        if (position > 0) {
+            var pinyin = getUser(position - 1).pinying;
+            pinyin.let {
+                if (user.pinying.startsWith(it.substring(0, 1))) {
+                    holder.shorthand.visibility = View.INVISIBLE
+                } else {
+                    holder.shorthand.visibility = View.VISIBLE
+                }
+            }
+        } else {
+            holder.shorthand.visibility = View.VISIBLE
+        }
         holder.itemView.setTag(R.id.user_name, user)
     }
 

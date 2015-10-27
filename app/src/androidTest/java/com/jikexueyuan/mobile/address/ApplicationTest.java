@@ -148,6 +148,6 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         String phone = td.get(2).text();
         String qq = td.get(3).text();
         String wechat = td.get(4).text();
-        return new User(username, email, phone, qq, wechat);
+        return new User(username, email, phone, qq, wechat, "");
     }
 }

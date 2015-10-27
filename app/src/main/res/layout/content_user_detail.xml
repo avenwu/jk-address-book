@@ -1,98 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.jikexueyuan.mobile.address.ui.UserDetailActivity"
     tools:showIn="@layout/activity_user_detail">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:background="@color/colorPrimary"
-        android:src="@drawable/ic_person_outline_100dp"
-        android:tint="@android:color/white" />
-
-    <TextView
-        android:id="@+id/user_name"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:text="ssss"
-        android:textColor="@android:color/white"
-        android:textSize="52dp" />
+        android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="4dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:src="@drawable/ic_person_outline_100dp"
+            android:tint="@android:color/white" />
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/user_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:divider="@drawable/vertical_divider"
-            android:orientation="vertical"
-            android:showDividers="middle|beginning|end">
+            android:background="@color/colorPrimary"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="姓名"
+            android:textColor="@android:color/white"
+            android:textSize="52dp" />
 
-            <LinearLayout style="@style/UserItemLayout">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp">
 
-                <ImageView
-                    style="@style/UserItemIcon"
-                    android:src="@drawable/ic_phone_24dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/vertical_divider"
+                android:orientation="vertical"
+                android:showDividers="middle|beginning|end">
 
-                <TextView
-                    android:id="@+id/phone"
-                    style="@style/UserItemLabel"
-                    android:hint="电话号码" />
+                <LinearLayout style="@style/UserItemLayout">
+
+                    <ImageView
+                        style="@style/UserItemIcon"
+                        android:src="@drawable/ic_phone_24dp" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        style="@style/UserItemLabel"
+                        android:hint="@string/hint_phone" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/UserItemLayout">
+
+                    <ImageView
+                        style="@style/UserItemIcon"
+                        android:src="@drawable/ic_email_24dp" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        style="@style/UserItemLabel"
+                        android:hint="@string/hint_email" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/UserItemLayout">
+
+                    <ImageView
+                        style="@style/UserItemIcon"
+                        android:src="@drawable/ic_qq_24dp" />
+
+                    <TextView
+                        android:id="@+id/qq"
+                        style="@style/UserItemLabel"
+                        android:hint="@string/hint_qq" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/UserItemLayout">
+
+                    <ImageView
+                        style="@style/UserItemIcon"
+                        android:src="@drawable/ic_people_24dp" />
+
+                    <TextView
+                        android:id="@+id/wechat"
+                        style="@style/UserItemLabel"
+                        android:hint="@string/hint_wechat" />
+
+                </LinearLayout>
             </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-            <LinearLayout style="@style/UserItemLayout">
-
-                <ImageView
-                    style="@style/UserItemIcon"
-                    android:src="@drawable/ic_email_24dp" />
-
-                <TextView
-                    android:id="@+id/email"
-                    style="@style/UserItemLabel"
-                    android:hint="电子邮箱" />
-
-            </LinearLayout>
-
-            <LinearLayout style="@style/UserItemLayout">
-
-                <ImageView
-                    style="@style/UserItemIcon"
-                    android:src="@drawable/ic_qq_24dp" />
-
-                <TextView
-                    android:id="@+id/qq"
-                    style="@style/UserItemLabel"
-                    android:hint="QQ" />
-
-            </LinearLayout>
-
-            <LinearLayout style="@style/UserItemLayout">
-
-                <ImageView
-                    style="@style/UserItemIcon"
-                    android:src="@drawable/ic_people_24dp" />
-
-                <TextView
-                    android:id="@+id/wechat"
-                    style="@style/UserItemLabel"
-                    android:hint="微信" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/import_tips"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10sp" />
+    </LinearLayout>
+</ScrollView>
