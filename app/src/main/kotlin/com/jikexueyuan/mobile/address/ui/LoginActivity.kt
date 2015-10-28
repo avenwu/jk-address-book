@@ -1,5 +1,7 @@
 package com.jikexueyuan.mobile.address.ui
 
+import android.accounts.Account
+import android.accounts.AccountManager
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.annotation.TargetApi
@@ -14,16 +16,14 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.view.inputmethod.EditorInfo
 import android.widget.AutoCompleteTextView
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
-import com.jikexueyuan.mobile.address.BuildConfig
+import com.jikexueyuan.mobile.address.Authenticator
 import com.jikexueyuan.mobile.address.R
-
 import com.jikexueyuan.mobile.address.api.AppService
 import com.jikexueyuan.mobile.address.getLoginTimestamp
 import com.jikexueyuan.mobile.address.updateLoginTimestamp
-import kotlinx.android.synthetic.content_main.progress
+import kotlinx.android.synthetic.activity_login.email_sign_in_button
 
 /**
  * A login screen that offers login via email/password.
@@ -57,8 +57,7 @@ class LoginActivity : AppCompatActivity() {
             }
         })
 
-        val mEmailSignInButton = findViewById(R.id.email_sign_in_button) as Button
-        mEmailSignInButton.setOnClickListener(object : OnClickListener {
+        email_sign_in_button.setOnClickListener(object : OnClickListener {
             override fun onClick(view: View) {
                 attemptLogin()
             }
@@ -66,7 +65,9 @@ class LoginActivity : AppCompatActivity() {
 
         mLoginFormView = findViewById(R.id.login_form)
         mProgressView = findViewById(R.id.login_progress)
-        trySkipLogin()
+        if (!intent.hasExtra(Authenticator.PARAM_AUTHTOKEN_TYPE)) {
+            trySkipLogin()
+        }
     }
 
     /**
@@ -116,12 +117,17 @@ class LoginActivity : AppCompatActivity() {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true)
+            var name = mEmailView!!.text.toString()
+            var pwd = mPasswordView!!.text.toString()
 
-            mAuthTask = AppService.login(BuildConfig.USER_NAME, BuildConfig.PASSWORD, { success ->
+            mAuthTask = AppService.login(name, pwd, { success ->
                 mAuthTask = null
                 showProgress(false)
 
                 if (success) {
+                    val account = Account(name, Authenticator.PARAM_ACCOUNT_TYPE)
+                    val bundle = Bundle()
+                    AccountManager.get(this).addAccountExplicitly(account, pwd, bundle)
                     updateLoginTimestamp(this, System.currentTimeMillis())
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
@@ -142,6 +148,20 @@ class LoginActivity : AppCompatActivity() {
         if (justLogin) {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+        } else {
+            val manager = AccountManager.get(this)
+            val accounts = manager.getAccountsByType(Authenticator.PARAM_ACCOUNT_TYPE)
+            if (accounts != null && accounts.size > 0) {
+                val name = accounts[0].name
+                val pwd = manager.getPassword(accounts[0])
+                if (!TextUtils.isEmpty(name)) {
+                    mEmailView?.setText(name)
+                }
+                if (!TextUtils.isEmpty(pwd)) {
+                    mPasswordView?.setText(pwd)
+                }
+                email_sign_in_button.performClick()
+            }
         }
     }
 
