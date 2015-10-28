@@ -18,13 +18,11 @@ import net.sourceforge.pinyin4j.PinyinHelper
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType
-import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination
 import org.json.JSONObject
 import java.io.File
 import java.io.ObjectInputStream
 import java.io.ObjectOutputStream
 import java.util.*
-import kotlin.test.assertEquals
 
 /**
  * Created by aven on 10/23/15.
@@ -39,9 +37,9 @@ public fun saveUserList2Cache(context: Context, list: List<User>, filter: ((List
                     var os = ObjectOutputStream(fos);
                     var filterData: List<User>? = null
                     filter?.let {
-                        filterData = emptyList()
                         filterData = filter(params[1] as List<User>)
                     }
+                    Log.d("File", "save user list:${filterData?.size}")
                     os.writeObject(filterData ?: params[1]);
                     os.close();
                     fos.close();
@@ -72,6 +70,7 @@ public fun getUserListFromCache(context: Context, listener: (List<User>) -> Unit
                 if (dataList == null || (dataList?.size == 0 && data.size > 0)) {
                     dataList = data
                 }
+                Log.d("File", "get user cache:${dataList?.size}")
             } catch(e: Exception) {
                 e.printStackTrace()
                 Log.d("File", "get user cache failed")
@@ -184,16 +183,16 @@ public fun openWeChat(context: Context, weChat: CharSequence) {
 }
 
 public fun skipSameUserFilter(oldData: List<User>): List<User> {
-    var dataList = emptyList<User>()
+    var dataList = ArrayList<User>()
     Log.w("Filter", "过滤重复号码")
-    var phoneSet = emptySet<String>()
+    var phoneSet = HashSet<String>()
     for (user in oldData) {
         if (phoneSet.contains(user.phone)) {
             Log.w("Filter", "跳过重复号：${user.json()}")
             continue
         }
-        phoneSet.plus(user.phone)
-        dataList.plus(user.copy())
+        phoneSet.add(user.phone)
+        dataList.add(user.copy())
     }
     return dataList
 }
