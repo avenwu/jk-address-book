@@ -9,7 +9,9 @@ import android.content.Intent
 import android.os.AsyncTask
 import android.os.Build
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
 import android.text.TextUtils
 import android.view.KeyEvent
 import android.view.View
@@ -18,12 +20,10 @@ import android.view.inputmethod.EditorInfo
 import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import android.widget.TextView
-import com.jikexueyuan.mobile.address.Authenticator
-import com.jikexueyuan.mobile.address.R
+import com.jikexueyuan.mobile.address.*
 import com.jikexueyuan.mobile.address.api.AppService
-import com.jikexueyuan.mobile.address.getLoginTimestamp
-import com.jikexueyuan.mobile.address.updateLoginTimestamp
-import kotlinx.android.synthetic.activity_login.email_sign_in_button
+import com.jikexueyuan.mobile.address.extention.startActivitySafely
+import kotlinx.android.synthetic.content_login.email_sign_in_button
 
 /**
  * A login screen that offers login via email/password.
@@ -44,6 +44,9 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        setSupportActionBar(toolbar)
+
         mEmailView = findViewById(R.id.email) as AutoCompleteTextView
 
         mPasswordView = findViewById(R.id.password) as EditText
@@ -132,8 +135,17 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
-                    mPasswordView!!.error = getString(R.string.error_incorrect_password)
-                    mPasswordView!!.requestFocus()
+                    if (isNetWorkAvailable(this)) {
+                        mPasswordView!!.error = getString(R.string.error_incorrect_password)
+                        mPasswordView!!.requestFocus()
+                    } else {
+                        Snackbar.make(mProgressView, R.string.network_is_unavailable, Snackbar.LENGTH_LONG)
+                                .setAction(R.string.open_setting, {
+                                    startActivitySafely(Intent(android.provider.Settings.ACTION_WIRELESS_SETTINGS), {
+                                        Snackbar.make(mProgressView, R.string.failed_open_setting, Snackbar.LENGTH_SHORT).show()
+                                    })
+                                }).show()
+                    }
                 }
             })
 
@@ -141,7 +153,7 @@ class LoginActivity : AppCompatActivity() {
     }
 
     /**
-     * 3分钟内免登陆
+     * 1. 3分钟内免登陆; 2.有网自动登录；3.无网络有缓存，跳过登录
      */
     fun trySkipLogin() {
         var justLogin = (System.currentTimeMillis() - getLoginTimestamp(this)) < 3 * 60 * 1000
@@ -160,7 +172,16 @@ class LoginActivity : AppCompatActivity() {
                 if (!TextUtils.isEmpty(pwd)) {
                     mPasswordView?.setText(pwd)
                 }
-                email_sign_in_button.performClick()
+                if (isNetWorkAvailable(this)) {
+                    email_sign_in_button.performClick()
+                } else {
+                    checkUserListCache(this, {
+                        if (it) {
+                            startActivity(Intent(this, MainActivity::class.java))
+                            finish()
+                        }
+                    })
+                }
             }
         }
     }

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/address_cell_selector"
     android:clickable="true"
-    android:divider="@drawable/tranparent_divider_space"
+    android:divider="@drawable/transparent_divider_space"
     android:gravity="center_vertical"
     android:orientation="horizontal"
     android:paddingBottom="8dp"

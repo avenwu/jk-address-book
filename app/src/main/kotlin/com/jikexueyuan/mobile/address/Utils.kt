@@ -35,7 +35,7 @@ public fun saveUserList2Cache(context: Context, list: List<User>, filter: ((List
         override fun doInBackground(vararg params: Any): Void? {
             params[0].let {
                 try {
-                    var fos = (params[0] as Context).openFileOutput("user-list", Context.MODE_PRIVATE);
+                    var fos = (params[0] as File).outputStream()
                     var os = ObjectOutputStream(fos);
                     var filterData: List<User>? = null
                     filter?.let {
@@ -52,7 +52,7 @@ public fun saveUserList2Cache(context: Context, list: List<User>, filter: ((List
             }
             return null
         }
-    }, context, list)
+    }, File(context.filesDir, "user-list"), list)
 }
 
 public fun getUserListFromCache(context: Context, listener: (List<User>) -> Unit, filter: ((List<User>) -> List<User>)? = null) {
@@ -60,8 +60,9 @@ public fun getUserListFromCache(context: Context, listener: (List<User>) -> Unit
         override fun doInBackground(vararg params: Any?): List<User>? {
             var dataList: List<User>? = emptyList()
             try {
-                var fis = (params[0] as Context).openFileInput("user-list");
-                var inStream = ObjectInputStream(fis);
+                var fis = (params[0] as File).inputStream()
+                var inStream = ObjectInputStream(fis)
+                fis.available()
                 var data = inStream.readObject() as List<User>;
                 inStream.close();
                 fis.close();
@@ -82,7 +83,37 @@ public fun getUserListFromCache(context: Context, listener: (List<User>) -> Unit
             super.onPostExecute(result)
             listener(result)
         }
-    }, context)
+    }, File(context.filesDir, "user-list"))
+}
+
+public fun checkUserListCache(context: Context, block: (Boolean) -> Unit) {
+    AsyncTaskCompat.executeParallel(object : AsyncTask<File, Void, Boolean>() {
+        override fun doInBackground(vararg params: File?): Boolean? {
+            var hasContent = false
+            try {
+                params[0].let {
+                    var fis = (params[0] as File).inputStream()
+                    var inStream = ObjectInputStream(fis)
+                    fis.available()
+                    var data = inStream.readObject() as List<User>;
+                    inStream.close();
+                    fis.close();
+                    if ((data.size) > 0) {
+                        hasContent = true
+                    }
+                }
+            } catch(e: Throwable) {
+                e.printStackTrace()
+                Log.d("File", "check user cache failed")
+            }
+            return hasContent
+        }
+
+        override fun onPostExecute(result: Boolean) {
+            super.onPostExecute(result)
+            block(result)
+        }
+    }, File(context.filesDir, "user-list"))
 }
 
 public fun json2User(json: String): User? {

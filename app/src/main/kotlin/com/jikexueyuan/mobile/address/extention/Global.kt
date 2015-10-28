@@ -16,9 +16,11 @@ import android.widget.Toast
 public fun toast(context: Context, text: CharSequence, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(context, text, duration).show()
 }
+
 public fun toast(context: Context, text: Int, duration: Int = Toast.LENGTH_SHORT) {
     Toast.makeText(context, text, duration).show()
 }
+
 /**
  * 检查Intent是否可以被处理
  */
@@ -30,7 +32,7 @@ public fun Intent.canBeHandled(context: Context): Boolean {
 /**
  * 情动activity，失败的会回调block
  */
-public fun Context.startActivitySafely(intent: Intent, block: ((Context) -> Unit)?) {
+public fun Context.startActivitySafely(intent: Intent, block: ((Context) -> Unit)? = null) {
     if (intent.canBeHandled(this)) {
         startActivity(intent)
     } else {

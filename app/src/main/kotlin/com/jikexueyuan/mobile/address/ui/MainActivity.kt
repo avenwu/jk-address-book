@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
             }
             if (isNetWorkAvailable(this)) {
                 updateAddressBook(1)
+            } else if (it.size <= 0) {
+                progress.setRefreshing(false)
+                progress.visibility = View.GONE
             }
         })
 

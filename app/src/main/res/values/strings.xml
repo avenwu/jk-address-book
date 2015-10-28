@@ -29,4 +29,7 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="network_is_unavailable">网络不给力，良辰也无可奈何！</string>
+    <string name="open_setting">设置网络</string>
+    <string name="failed_open_setting">请手工设置网络</string>
 </resources>

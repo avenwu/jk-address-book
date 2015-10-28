@@ -18,7 +18,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerInParent="true"
-        app:progress_src="@drawable/ic_refresh_60dp"
+        app:progress_src="@drawable/ic_refresh_120dp"
         app:progress_tint="?attr/colorPrimary" />
 
 </RelativeLayout>
