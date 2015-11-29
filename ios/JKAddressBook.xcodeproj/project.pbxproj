@@ -1,0 +1,668 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		344F5B001C0B034A003D623D /* login.html in Resources */ = {isa = PBXBuildFile; fileRef = 344F5AFF1C0B034A003D623D /* login.html */; settings = {ASSET_TAGS = (); }; };
+		347289041C0ADFC700644418 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347289031C0ADFC700644418 /* AppDelegate.swift */; };
+		347289061C0ADFC700644418 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347289051C0ADFC700644418 /* ViewController.swift */; };
+		347289091C0ADFC700644418 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347289071C0ADFC700644418 /* Main.storyboard */; };
+		3472890C1C0ADFC700644418 /* JKAddressBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3472890A1C0ADFC700644418 /* JKAddressBook.xcdatamodeld */; };
+		3472890E1C0ADFC700644418 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3472890D1C0ADFC700644418 /* Assets.xcassets */; };
+		347289111C0ADFC700644418 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3472890F1C0ADFC700644418 /* LaunchScreen.storyboard */; };
+		3472891C1C0ADFC700644418 /* JKAddressBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3472891B1C0ADFC700644418 /* JKAddressBookTests.swift */; };
+		347289271C0ADFC700644418 /* JKAddressBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347289261C0ADFC700644418 /* JKAddressBookUITests.swift */; };
+		5AC837B6A6798470330F48D2 /* Pods_JKAddressBookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0FE89714A996BBD71AA9CF /* Pods_JKAddressBookTests.framework */; };
+		82E175C9ABE3BCC47AD87765 /* Pods_JKAddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F13A67B22B29B55621B3E2 /* Pods_JKAddressBook.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		347289181C0ADFC700644418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 347288F81C0ADFC700644418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 347288FF1C0ADFC700644418;
+			remoteInfo = JKAddressBook;
+		};
+		347289231C0ADFC700644418 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 347288F81C0ADFC700644418 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 347288FF1C0ADFC700644418;
+			remoteInfo = JKAddressBook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CAEEC5EF853A44628F52E73 /* Pods-JKAddressBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAddressBookTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKAddressBookTests/Pods-JKAddressBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		344F5AFF1C0B034A003D623D /* login.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = login.html; sourceTree = "<group>"; };
+		34716CBE3AA8BEC6E661DE74 /* Pods-JKAddressBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAddressBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-JKAddressBook/Pods-JKAddressBook.release.xcconfig"; sourceTree = "<group>"; };
+		347289001C0ADFC700644418 /* JKAddressBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKAddressBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		347289031C0ADFC700644418 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		347289051C0ADFC700644418 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		347289081C0ADFC700644418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3472890B1C0ADFC700644418 /* JKAddressBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JKAddressBook.xcdatamodel; sourceTree = "<group>"; };
+		3472890D1C0ADFC700644418 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		347289101C0ADFC700644418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		347289121C0ADFC700644418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347289171C0ADFC700644418 /* JKAddressBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKAddressBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3472891B1C0ADFC700644418 /* JKAddressBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKAddressBookTests.swift; sourceTree = "<group>"; };
+		3472891D1C0ADFC700644418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		347289221C0ADFC700644418 /* JKAddressBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKAddressBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		347289261C0ADFC700644418 /* JKAddressBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JKAddressBookUITests.swift; sourceTree = "<group>"; };
+		347289281C0ADFC700644418 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D0FE89714A996BBD71AA9CF /* Pods_JKAddressBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKAddressBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		872301423D1CAC3780728FCD /* Pods-JKAddressBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAddressBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKAddressBook/Pods-JKAddressBook.debug.xcconfig"; sourceTree = "<group>"; };
+		88F13A67B22B29B55621B3E2 /* Pods_JKAddressBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKAddressBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8F2C1F6E978F4DB657FE7B /* Pods-JKAddressBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JKAddressBookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JKAddressBookTests/Pods-JKAddressBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		347288FD1C0ADFC700644418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E175C9ABE3BCC47AD87765 /* Pods_JKAddressBook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347289141C0ADFC700644418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AC837B6A6798470330F48D2 /* Pods_JKAddressBookTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3472891F1C0ADFC700644418 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		347288F71C0ADFC700644418 = {
+			isa = PBXGroup;
+			children = (
+				347289021C0ADFC700644418 /* JKAddressBook */,
+				3472891A1C0ADFC700644418 /* JKAddressBookTests */,
+				347289251C0ADFC700644418 /* JKAddressBookUITests */,
+				347289011C0ADFC700644418 /* Products */,
+				55529CDDCA53A7C56BA2024E /* Pods */,
+				C40F9A61F59F6258F4E37588 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		347289011C0ADFC700644418 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				347289001C0ADFC700644418 /* JKAddressBook.app */,
+				347289171C0ADFC700644418 /* JKAddressBookTests.xctest */,
+				347289221C0ADFC700644418 /* JKAddressBookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		347289021C0ADFC700644418 /* JKAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				344F5AFF1C0B034A003D623D /* login.html */,
+				347289031C0ADFC700644418 /* AppDelegate.swift */,
+				347289051C0ADFC700644418 /* ViewController.swift */,
+				347289071C0ADFC700644418 /* Main.storyboard */,
+				3472890D1C0ADFC700644418 /* Assets.xcassets */,
+				3472890F1C0ADFC700644418 /* LaunchScreen.storyboard */,
+				347289121C0ADFC700644418 /* Info.plist */,
+				3472890A1C0ADFC700644418 /* JKAddressBook.xcdatamodeld */,
+			);
+			path = JKAddressBook;
+			sourceTree = "<group>";
+		};
+		3472891A1C0ADFC700644418 /* JKAddressBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				3472891B1C0ADFC700644418 /* JKAddressBookTests.swift */,
+				3472891D1C0ADFC700644418 /* Info.plist */,
+			);
+			path = JKAddressBookTests;
+			sourceTree = "<group>";
+		};
+		347289251C0ADFC700644418 /* JKAddressBookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				347289261C0ADFC700644418 /* JKAddressBookUITests.swift */,
+				347289281C0ADFC700644418 /* Info.plist */,
+			);
+			path = JKAddressBookUITests;
+			sourceTree = "<group>";
+		};
+		55529CDDCA53A7C56BA2024E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				872301423D1CAC3780728FCD /* Pods-JKAddressBook.debug.xcconfig */,
+				34716CBE3AA8BEC6E661DE74 /* Pods-JKAddressBook.release.xcconfig */,
+				DC8F2C1F6E978F4DB657FE7B /* Pods-JKAddressBookTests.debug.xcconfig */,
+				1CAEEC5EF853A44628F52E73 /* Pods-JKAddressBookTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C40F9A61F59F6258F4E37588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88F13A67B22B29B55621B3E2 /* Pods_JKAddressBook.framework */,
+				3D0FE89714A996BBD71AA9CF /* Pods_JKAddressBookTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		347288FF1C0ADFC700644418 /* JKAddressBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3472892B1C0ADFC700644418 /* Build configuration list for PBXNativeTarget "JKAddressBook" */;
+			buildPhases = (
+				F55CA4A502628942F853DF4E /* Check Pods Manifest.lock */,
+				347288FC1C0ADFC700644418 /* Sources */,
+				347288FD1C0ADFC700644418 /* Frameworks */,
+				347288FE1C0ADFC700644418 /* Resources */,
+				667BA6A6784400EC0253F97C /* Embed Pods Frameworks */,
+				C8010F2807005D654C6925A4 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKAddressBook;
+			productName = JKAddressBook;
+			productReference = 347289001C0ADFC700644418 /* JKAddressBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		347289161C0ADFC700644418 /* JKAddressBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3472892E1C0ADFC700644418 /* Build configuration list for PBXNativeTarget "JKAddressBookTests" */;
+			buildPhases = (
+				329DB49D1AE002D823C20532 /* Check Pods Manifest.lock */,
+				347289131C0ADFC700644418 /* Sources */,
+				347289141C0ADFC700644418 /* Frameworks */,
+				347289151C0ADFC700644418 /* Resources */,
+				EDB318D0FF7173853571ECAB /* Embed Pods Frameworks */,
+				1799A940B442E4A6F427DF9C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				347289191C0ADFC700644418 /* PBXTargetDependency */,
+			);
+			name = JKAddressBookTests;
+			productName = JKAddressBookTests;
+			productReference = 347289171C0ADFC700644418 /* JKAddressBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		347289211C0ADFC700644418 /* JKAddressBookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 347289311C0ADFC700644418 /* Build configuration list for PBXNativeTarget "JKAddressBookUITests" */;
+			buildPhases = (
+				3472891E1C0ADFC700644418 /* Sources */,
+				3472891F1C0ADFC700644418 /* Frameworks */,
+				347289201C0ADFC700644418 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				347289241C0ADFC700644418 /* PBXTargetDependency */,
+			);
+			name = JKAddressBookUITests;
+			productName = JKAddressBookUITests;
+			productReference = 347289221C0ADFC700644418 /* JKAddressBookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		347288F81C0ADFC700644418 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = avenwu;
+				TargetAttributes = {
+					347288FF1C0ADFC700644418 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = LLXV37YD9Q;
+					};
+					347289161C0ADFC700644418 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = LLXV37YD9Q;
+						TestTargetID = 347288FF1C0ADFC700644418;
+					};
+					347289211C0ADFC700644418 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = LLXV37YD9Q;
+						TestTargetID = 347288FF1C0ADFC700644418;
+					};
+				};
+			};
+			buildConfigurationList = 347288FB1C0ADFC700644418 /* Build configuration list for PBXProject "JKAddressBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 347288F71C0ADFC700644418;
+			productRefGroup = 347289011C0ADFC700644418 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				347288FF1C0ADFC700644418 /* JKAddressBook */,
+				347289161C0ADFC700644418 /* JKAddressBookTests */,
+				347289211C0ADFC700644418 /* JKAddressBookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		347288FE1C0ADFC700644418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347289111C0ADFC700644418 /* LaunchScreen.storyboard in Resources */,
+				3472890E1C0ADFC700644418 /* Assets.xcassets in Resources */,
+				344F5B001C0B034A003D623D /* login.html in Resources */,
+				347289091C0ADFC700644418 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347289151C0ADFC700644418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347289201C0ADFC700644418 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1799A940B442E4A6F427DF9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKAddressBookTests/Pods-JKAddressBookTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		329DB49D1AE002D823C20532 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		667BA6A6784400EC0253F97C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKAddressBook/Pods-JKAddressBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8010F2807005D654C6925A4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKAddressBook/Pods-JKAddressBook-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDB318D0FF7173853571ECAB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JKAddressBookTests/Pods-JKAddressBookTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F55CA4A502628942F853DF4E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		347288FC1C0ADFC700644418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347289061C0ADFC700644418 /* ViewController.swift in Sources */,
+				347289041C0ADFC700644418 /* AppDelegate.swift in Sources */,
+				3472890C1C0ADFC700644418 /* JKAddressBook.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		347289131C0ADFC700644418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3472891C1C0ADFC700644418 /* JKAddressBookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3472891E1C0ADFC700644418 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				347289271C0ADFC700644418 /* JKAddressBookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		347289191C0ADFC700644418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 347288FF1C0ADFC700644418 /* JKAddressBook */;
+			targetProxy = 347289181C0ADFC700644418 /* PBXContainerItemProxy */;
+		};
+		347289241C0ADFC700644418 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 347288FF1C0ADFC700644418 /* JKAddressBook */;
+			targetProxy = 347289231C0ADFC700644418 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		347289071C0ADFC700644418 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347289081C0ADFC700644418 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3472890F1C0ADFC700644418 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				347289101C0ADFC700644418 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		347289291C0ADFC700644418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3472892A1C0ADFC700644418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3472892C1C0ADFC700644418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 872301423D1CAC3780728FCD /* Pods-JKAddressBook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKAddressBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.avenwu.JKAddressBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3472892D1C0ADFC700644418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34716CBE3AA8BEC6E661DE74 /* Pods-JKAddressBook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKAddressBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.avenwu.JKAddressBook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3472892F1C0ADFC700644418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC8F2C1F6E978F4DB657FE7B /* Pods-JKAddressBookTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKAddressBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.avenwu.JKAddressBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKAddressBook.app/JKAddressBook";
+			};
+			name = Debug;
+		};
+		347289301C0ADFC700644418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CAEEC5EF853A44628F52E73 /* Pods-JKAddressBookTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKAddressBookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.avenwu.JKAddressBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKAddressBook.app/JKAddressBook";
+			};
+			name = Release;
+		};
+		347289321C0ADFC700644418 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKAddressBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.avenwu.JKAddressBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKAddressBook;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		347289331C0ADFC700644418 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKAddressBookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.avenwu.JKAddressBookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKAddressBook;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		347288FB1C0ADFC700644418 /* Build configuration list for PBXProject "JKAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347289291C0ADFC700644418 /* Debug */,
+				3472892A1C0ADFC700644418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3472892B1C0ADFC700644418 /* Build configuration list for PBXNativeTarget "JKAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3472892C1C0ADFC700644418 /* Debug */,
+				3472892D1C0ADFC700644418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3472892E1C0ADFC700644418 /* Build configuration list for PBXNativeTarget "JKAddressBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3472892F1C0ADFC700644418 /* Debug */,
+				347289301C0ADFC700644418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		347289311C0ADFC700644418 /* Build configuration list for PBXNativeTarget "JKAddressBookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				347289321C0ADFC700644418 /* Debug */,
+				347289331C0ADFC700644418 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3472890A1C0ADFC700644418 /* JKAddressBook.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3472890B1C0ADFC700644418 /* JKAddressBook.xcdatamodel */,
+			);
+			currentVersion = 3472890B1C0ADFC700644418 /* JKAddressBook.xcdatamodel */;
+			path = JKAddressBook.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 347288F81C0ADFC700644418 /* Project object */;
+}

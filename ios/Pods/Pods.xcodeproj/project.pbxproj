@@ -1,0 +1,786 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B2A158247157B59BE852F5E27A959FF /* SAX2.h in Headers */ = {isa = PBXBuildFile; fileRef = 044CC7695BE48763467D38F0D520BDEE /* SAX2.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A779BBA2C2287D59F90515A0B115505 /* dict.h in Headers */ = {isa = PBXBuildFile; fileRef = 256F69435D7C9B21651A3CF3A1A46A4A /* dict.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B316CEEAD6FD3120AD7899C3B2E4101 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E521237DD68FC0E97C50A520BBFB71 /* libxmlParserOption.swift */; };
+		295B66DE388FBF2B6BA728D16E571C57 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35294A53ECE97B60CE88F19A6EB340AD /* libxmlHTMLDocument.swift */; };
+		2A0F98EDF6A74D4905BE61503B9D9239 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361383A66A4B639EA042C1CAA8BAD8E4 /* CSS.swift */; };
+		2C6F31CA5077DEBFB4DE71CB35D01DD2 /* HTMLtree.h in Headers */ = {isa = PBXBuildFile; fileRef = 24B7EC3448E405E8387486876DEDECFD /* HTMLtree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40B6493D6716266C1798DA37C421E5AC /* xmlregexp.h in Headers */ = {isa = PBXBuildFile; fileRef = 210E0A688FC35729A4700B359390B4FF /* xmlregexp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42F4A2114903AC548BEB47FA079388EB /* Kanna-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62956F9FEBBF4BDDAC06E77B633BF608 /* Kanna-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4611D0779F7075230C6EC0039061E5EB /* xmlstring.h in Headers */ = {isa = PBXBuildFile; fileRef = A41B9BF0FFEB8708F19AD8374382B331 /* xmlstring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5025378D1DFC21104B5A6F40F5120C60 /* globals.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AE09C99B150AB1702AD40F9ACB26F78 /* globals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52DE3E4DADE7B531139EABE65FF85E3A /* parser.h in Headers */ = {isa = PBXBuildFile; fileRef = A40F6DC5863822F2978FE961C5692BFD /* parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53A166D60940A0028C5BE0D72A899FCB /* Pods-JKAddressBookTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C56F52B34E42786F2E613C1E72ECAED /* Pods-JKAddressBookTests-dummy.m */; };
+		5BA7263C6950A5445A1E05D6ED9B9B0C /* xmlautomata.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B7A923F815EBB0B3B14BC338EA06300 /* xmlautomata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65D973634B5A725E6E9DB26E76A5984D /* hash.h in Headers */ = {isa = PBXBuildFile; fileRef = 467C7D287E547A52FD0E22A727DDAB4E /* hash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		674F085B38CD41ABCF9984E52A0E6986 /* Pods-JKAddressBook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01CD6EDF6D0A59057C56B0BB359CB7E6 /* Pods-JKAddressBook-dummy.m */; };
+		690200F751F62B856B5CB8720F7B9C1A /* Kanna.h in Headers */ = {isa = PBXBuildFile; fileRef = 8523004C64C54B4B8149B455610EE384 /* Kanna.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A184B977475575065B9D4EB805E622E /* xmlmemory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E97B199203DC6E2B3C6B25AD23C43A0 /* xmlmemory.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7334D8E15C92F020DDA001E668E5A8A1 /* xpath.h in Headers */ = {isa = PBXBuildFile; fileRef = 85126EF76621D945AD713F6020533778 /* xpath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76B3882D79A9E9398A59EFDC27D3B2D8 /* HTMLparser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F981255957EF8E621BE7F41B1A7E7E5 /* HTMLparser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7753BBF9C9A68A791878D8674C7B75B0 /* list.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B244D8EFDFBA72EB3D3BB386A56F704 /* list.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		786FC5EFFF66FB55526D981DF93AC717 /* SAX.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A020989FDA779F9A905BF556A356437 /* SAX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78E93E9519DE5BEFD45A2E11EFB036D7 /* xmlerror.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D48EFC100C824793EA04419AC30475F /* xmlerror.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F16909E2201010666A8C7D459EEB341 /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = BA19E7F318CC7DFFF7FF6FCC0D04F4AE /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8065C6476C061E6D93848B90D6B1A167 /* Pods-JKAddressBookTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A724D85E9A42E30A408E8180FFA42EB /* Pods-JKAddressBookTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		874655FB27DAC01E12CF9B8B16C1F22D /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452AD813E0769FA0149C2DB06B5455C /* libxmlHTMLNode.swift */; };
+		8D5E683C66C3759D10E4B5CACBCC894B /* xlink.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C7E535F9C8830D6CC05F70753E671C /* xlink.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9484B6E2A8FDBDB9D7B559929C955F49 /* Pods-JKAddressBook-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CDB48853259D1C22633EE9CEBD2C5E4 /* Pods-JKAddressBook-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		97204E6710C3A6F5848B872133454879 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93773430C89340141BA44F6CB82BCB7E /* HTMLParser.swift */; };
+		B263BA20E39579FCD7102DFCB01C5F57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		BEAFBA9BA699C5F1366E622412034BE3 /* xmlexports.h in Headers */ = {isa = PBXBuildFile; fileRef = AE5E40C03CDC1D7705F9661F23B1AF8F /* xmlexports.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0302D845167AEE0D498511946066ECC /* xmlIO.h in Headers */ = {isa = PBXBuildFile; fileRef = A30B952BB6FACCADD721331BDB332A5D /* xmlIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C499D9ED7CBF067A345A2E4E9A543954 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = D115650D1BB06F2E67B0B8EB85EBFDEC /* Kanna.swift */; };
+		D1A8CF41406375BC15A7DAE776AED95A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D3A6F4DB33417466B2D4873191449D0C /* Kanna-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD24835E8019F7BC39EC2868AFF173AE /* Kanna-dummy.m */; };
+		D8E42FB4CDFAE03DFF08FAA88E0EBF6D /* xmlversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 51618BBE3BF1FB2E44EB63E96619496F /* xmlversion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF783166AE3BC0A09D31D5CD9FE82394 /* xpathInternals.h in Headers */ = {isa = PBXBuildFile; fileRef = FEDFED8D3A3A5DD01C9557941E2E3D4C /* xpathInternals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D5D03096B5068B9EB17015C9EC32D5 /* threads.h in Headers */ = {isa = PBXBuildFile; fileRef = 21717680252E5B1122284FA259CF7041 /* threads.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F835F0F519586769C4E4EB71640CE184 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		F8DF0EA4B7C34511BE363F8646DA27D9 /* valid.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E474A02D46B3282FABBCB477D7A4A8C /* valid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F97D822A42CCE194E6941CDDE465A8F1 /* entities.h in Headers */ = {isa = PBXBuildFile; fileRef = E182FD396480B132A7E5C9B279244ECB /* entities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD877092D437C710096114B56D57740F /* tree.h in Headers */ = {isa = PBXBuildFile; fileRef = A3836826FFEDA477D7F14AD431AC88F9 /* tree.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A6BB98CD25FBB14E3765EC54F949A27B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E26363B73022A679DE4E50CFF38138A;
+			remoteInfo = Kanna;
+		};
+		FB3FA91C38724F5C5F0CD75F0FFBD2D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9E26363B73022A679DE4E50CFF38138A;
+			remoteInfo = Kanna;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01CD6EDF6D0A59057C56B0BB359CB7E6 /* Pods-JKAddressBook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JKAddressBook-dummy.m"; sourceTree = "<group>"; };
+		044CC7695BE48763467D38F0D520BDEE /* SAX2.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX2.h; path = Library/libxml/SAX2.h; sourceTree = "<group>"; };
+		0B180080911B935E92872F77A897FAFE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C45BD852DDA4437530C2C84A7E3251F /* Pods-JKAddressBook-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKAddressBook-acknowledgements.plist"; sourceTree = "<group>"; };
+		0C56F52B34E42786F2E613C1E72ECAED /* Pods-JKAddressBookTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JKAddressBookTests-dummy.m"; sourceTree = "<group>"; };
+		1A020989FDA779F9A905BF556A356437 /* SAX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SAX.h; path = Library/libxml/SAX.h; sourceTree = "<group>"; };
+		210E0A688FC35729A4700B359390B4FF /* xmlregexp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlregexp.h; path = Library/libxml/xmlregexp.h; sourceTree = "<group>"; };
+		21717680252E5B1122284FA259CF7041 /* threads.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = threads.h; path = Library/libxml/threads.h; sourceTree = "<group>"; };
+		24B7EC3448E405E8387486876DEDECFD /* HTMLtree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLtree.h; path = Library/libxml/HTMLtree.h; sourceTree = "<group>"; };
+		256F69435D7C9B21651A3CF3A1A46A4A /* dict.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dict.h; path = Library/libxml/dict.h; sourceTree = "<group>"; };
+		2820EDD662D4D662089B14081544D98C /* Pods-JKAddressBook.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JKAddressBook.modulemap"; sourceTree = "<group>"; };
+		28C7E535F9C8830D6CC05F70753E671C /* xlink.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xlink.h; path = Library/libxml/xlink.h; sourceTree = "<group>"; };
+		30E521237DD68FC0E97C50A520BBFB71 /* libxmlParserOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlParserOption.swift; path = Source/libxml/libxmlParserOption.swift; sourceTree = "<group>"; };
+		35294A53ECE97B60CE88F19A6EB340AD /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLDocument.swift; path = Source/libxml/libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		361383A66A4B639EA042C1CAA8BAD8E4 /* CSS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSS.swift; path = Source/CSS.swift; sourceTree = "<group>"; };
+		3D48EFC100C824793EA04419AC30475F /* xmlerror.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlerror.h; path = Library/libxml/xmlerror.h; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		467C7D287E547A52FD0E22A727DDAB4E /* hash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = hash.h; path = Library/libxml/hash.h; sourceTree = "<group>"; };
+		4B7A923F815EBB0B3B14BC338EA06300 /* xmlautomata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlautomata.h; path = Library/libxml/xmlautomata.h; sourceTree = "<group>"; };
+		4C1D34CDFAE27744A9A615D294D65320 /* Pods-JKAddressBook-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKAddressBook-acknowledgements.markdown"; sourceTree = "<group>"; };
+		509476CB8A2783BE837F588C627F5995 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51618BBE3BF1FB2E44EB63E96619496F /* xmlversion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlversion.h; path = Library/libxml/xmlversion.h; sourceTree = "<group>"; };
+		520CAC0FB85BFAD931ED0DA659863A89 /* Kanna.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kanna.xcconfig; sourceTree = "<group>"; };
+		5CDB48853259D1C22633EE9CEBD2C5E4 /* Pods-JKAddressBook-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKAddressBook-umbrella.h"; sourceTree = "<group>"; };
+		62956F9FEBBF4BDDAC06E77B633BF608 /* Kanna-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-umbrella.h"; sourceTree = "<group>"; };
+		6452AD813E0769FA0149C2DB06B5455C /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = libxmlHTMLNode.swift; path = Source/libxml/libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		6E474A02D46B3282FABBCB477D7A4A8C /* valid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = valid.h; path = Library/libxml/valid.h; sourceTree = "<group>"; };
+		7AE09C99B150AB1702AD40F9ACB26F78 /* globals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = globals.h; path = Library/libxml/globals.h; sourceTree = "<group>"; };
+		81878BE181CB4C969CBFBAF908F9BADE /* Pods-JKAddressBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKAddressBook.debug.xcconfig"; sourceTree = "<group>"; };
+		84C06C6496742A0EB441F2519232DF8F /* Pods_JKAddressBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKAddressBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85126EF76621D945AD713F6020533778 /* xpath.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpath.h; path = Library/libxml/xpath.h; sourceTree = "<group>"; };
+		8523004C64C54B4B8149B455610EE384 /* Kanna.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kanna.h; path = Source/Kanna.h; sourceTree = "<group>"; };
+		8F981255957EF8E621BE7F41B1A7E7E5 /* HTMLparser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HTMLparser.h; path = Library/libxml/HTMLparser.h; sourceTree = "<group>"; };
+		927BA1E68F56C86892E57625EF7973C6 /* Kanna-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kanna-prefix.pch"; sourceTree = "<group>"; };
+		93773430C89340141BA44F6CB82BCB7E /* HTMLParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HTMLParser.swift; path = Source/_obsolete/HTMLParser.swift; sourceTree = "<group>"; };
+		953243B7254CA2093EE9A6DAE49E3820 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A724D85E9A42E30A408E8180FFA42EB /* Pods-JKAddressBookTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JKAddressBookTests-umbrella.h"; sourceTree = "<group>"; };
+		9B244D8EFDFBA72EB3D3BB386A56F704 /* list.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = list.h; path = Library/libxml/list.h; sourceTree = "<group>"; };
+		9E97B199203DC6E2B3C6B25AD23C43A0 /* xmlmemory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlmemory.h; path = Library/libxml/xmlmemory.h; sourceTree = "<group>"; };
+		A108CA40835F5A02C94D168790B9EA6A /* Pods_JKAddressBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JKAddressBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A30B952BB6FACCADD721331BDB332A5D /* xmlIO.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlIO.h; path = Library/libxml/xmlIO.h; sourceTree = "<group>"; };
+		A3836826FFEDA477D7F14AD431AC88F9 /* tree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tree.h; path = Library/libxml/tree.h; sourceTree = "<group>"; };
+		A40F6DC5863822F2978FE961C5692BFD /* parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parser.h; path = Library/libxml/parser.h; sourceTree = "<group>"; };
+		A41B9BF0FFEB8708F19AD8374382B331 /* xmlstring.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlstring.h; path = Library/libxml/xmlstring.h; sourceTree = "<group>"; };
+		A4510C6195F7CFE9A376CE0630A54AB9 /* Kanna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kanna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4959F7D0AC34451F8F2693017ECDE72 /* Kanna.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kanna.modulemap; sourceTree = "<group>"; };
+		A69F7B437AB2BE6F208982F09DAFC0A5 /* Pods-JKAddressBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKAddressBookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7DDB5698A2726AC1A066718D772CE61 /* Pods-JKAddressBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKAddressBook.release.xcconfig"; sourceTree = "<group>"; };
+		A8EB0463742F06D78E87E9E600036949 /* Pods-JKAddressBookTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKAddressBookTests-frameworks.sh"; sourceTree = "<group>"; };
+		AD24835E8019F7BC39EC2868AFF173AE /* Kanna-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kanna-dummy.m"; sourceTree = "<group>"; };
+		AE5E40C03CDC1D7705F9661F23B1AF8F /* xmlexports.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xmlexports.h; path = Library/libxml/xmlexports.h; sourceTree = "<group>"; };
+		B3F3E1A5EB44432598AA66944B6E41FD /* Pods-JKAddressBookTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-JKAddressBookTests.modulemap"; sourceTree = "<group>"; };
+		BA19E7F318CC7DFFF7FF6FCC0D04F4AE /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = Library/libxml/encoding.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D115650D1BB06F2E67B0B8EB85EBFDEC /* Kanna.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kanna.swift; path = Source/Kanna.swift; sourceTree = "<group>"; };
+		D9CD0566360B555AAE4D03C69AD649D4 /* Pods-JKAddressBookTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKAddressBookTests-resources.sh"; sourceTree = "<group>"; };
+		E0ADB749ED5FF611B6B866162258D42A /* Pods-JKAddressBook-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKAddressBook-frameworks.sh"; sourceTree = "<group>"; };
+		E182FD396480B132A7E5C9B279244ECB /* entities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = entities.h; path = Library/libxml/entities.h; sourceTree = "<group>"; };
+		E90FF2DCC52620815BA552E01591462F /* Pods-JKAddressBook-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JKAddressBook-resources.sh"; sourceTree = "<group>"; };
+		F1FD73DE0AD7DE415FBD131B738FA8F4 /* Pods-JKAddressBookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JKAddressBookTests.release.xcconfig"; sourceTree = "<group>"; };
+		F389DB283BDA33C24167F171D89F8494 /* Pods-JKAddressBookTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JKAddressBookTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F4725B59A746A6DEE96CA9050108A971 /* Pods-JKAddressBookTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JKAddressBookTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FEDFED8D3A3A5DD01C9557941E2E3D4C /* xpathInternals.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = xpathInternals.h; path = Library/libxml/xpathInternals.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DA32D32235EF5C507A3B8200E578599 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B263BA20E39579FCD7102DFCB01C5F57 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9CF230CC0385458CE1A80751303D579C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F835F0F519586769C4E4EB71640CE184 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2CA3162E5304F9580955B2ADC723C30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1A8CF41406375BC15A7DAE776AED95A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BCE9C8A48B249AD31F7E0100D8D5B77 /* Pods-JKAddressBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				953243B7254CA2093EE9A6DAE49E3820 /* Info.plist */,
+				B3F3E1A5EB44432598AA66944B6E41FD /* Pods-JKAddressBookTests.modulemap */,
+				F4725B59A746A6DEE96CA9050108A971 /* Pods-JKAddressBookTests-acknowledgements.markdown */,
+				F389DB283BDA33C24167F171D89F8494 /* Pods-JKAddressBookTests-acknowledgements.plist */,
+				0C56F52B34E42786F2E613C1E72ECAED /* Pods-JKAddressBookTests-dummy.m */,
+				A8EB0463742F06D78E87E9E600036949 /* Pods-JKAddressBookTests-frameworks.sh */,
+				D9CD0566360B555AAE4D03C69AD649D4 /* Pods-JKAddressBookTests-resources.sh */,
+				9A724D85E9A42E30A408E8180FFA42EB /* Pods-JKAddressBookTests-umbrella.h */,
+				A69F7B437AB2BE6F208982F09DAFC0A5 /* Pods-JKAddressBookTests.debug.xcconfig */,
+				F1FD73DE0AD7DE415FBD131B738FA8F4 /* Pods-JKAddressBookTests.release.xcconfig */,
+			);
+			name = "Pods-JKAddressBookTests";
+			path = "Target Support Files/Pods-JKAddressBookTests";
+			sourceTree = "<group>";
+		};
+		18010144FBE0C43B9E02E6401776070A /* Kanna */ = {
+			isa = PBXGroup;
+			children = (
+				361383A66A4B639EA042C1CAA8BAD8E4 /* CSS.swift */,
+				256F69435D7C9B21651A3CF3A1A46A4A /* dict.h */,
+				BA19E7F318CC7DFFF7FF6FCC0D04F4AE /* encoding.h */,
+				E182FD396480B132A7E5C9B279244ECB /* entities.h */,
+				7AE09C99B150AB1702AD40F9ACB26F78 /* globals.h */,
+				467C7D287E547A52FD0E22A727DDAB4E /* hash.h */,
+				8F981255957EF8E621BE7F41B1A7E7E5 /* HTMLparser.h */,
+				93773430C89340141BA44F6CB82BCB7E /* HTMLParser.swift */,
+				24B7EC3448E405E8387486876DEDECFD /* HTMLtree.h */,
+				8523004C64C54B4B8149B455610EE384 /* Kanna.h */,
+				D115650D1BB06F2E67B0B8EB85EBFDEC /* Kanna.swift */,
+				35294A53ECE97B60CE88F19A6EB340AD /* libxmlHTMLDocument.swift */,
+				6452AD813E0769FA0149C2DB06B5455C /* libxmlHTMLNode.swift */,
+				30E521237DD68FC0E97C50A520BBFB71 /* libxmlParserOption.swift */,
+				9B244D8EFDFBA72EB3D3BB386A56F704 /* list.h */,
+				A40F6DC5863822F2978FE961C5692BFD /* parser.h */,
+				1A020989FDA779F9A905BF556A356437 /* SAX.h */,
+				044CC7695BE48763467D38F0D520BDEE /* SAX2.h */,
+				21717680252E5B1122284FA259CF7041 /* threads.h */,
+				A3836826FFEDA477D7F14AD431AC88F9 /* tree.h */,
+				6E474A02D46B3282FABBCB477D7A4A8C /* valid.h */,
+				28C7E535F9C8830D6CC05F70753E671C /* xlink.h */,
+				4B7A923F815EBB0B3B14BC338EA06300 /* xmlautomata.h */,
+				3D48EFC100C824793EA04419AC30475F /* xmlerror.h */,
+				AE5E40C03CDC1D7705F9661F23B1AF8F /* xmlexports.h */,
+				A30B952BB6FACCADD721331BDB332A5D /* xmlIO.h */,
+				9E97B199203DC6E2B3C6B25AD23C43A0 /* xmlmemory.h */,
+				210E0A688FC35729A4700B359390B4FF /* xmlregexp.h */,
+				A41B9BF0FFEB8708F19AD8374382B331 /* xmlstring.h */,
+				51618BBE3BF1FB2E44EB63E96619496F /* xmlversion.h */,
+				85126EF76621D945AD713F6020533778 /* xpath.h */,
+				FEDFED8D3A3A5DD01C9557941E2E3D4C /* xpathInternals.h */,
+				82AC5F21BE57B6FA151A25CD64AAA78A /* Support Files */,
+			);
+			path = Kanna;
+			sourceTree = "<group>";
+		};
+		3688418EA13623BA93BE90E5B0E23BA4 /* Pods-JKAddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				509476CB8A2783BE837F588C627F5995 /* Info.plist */,
+				2820EDD662D4D662089B14081544D98C /* Pods-JKAddressBook.modulemap */,
+				4C1D34CDFAE27744A9A615D294D65320 /* Pods-JKAddressBook-acknowledgements.markdown */,
+				0C45BD852DDA4437530C2C84A7E3251F /* Pods-JKAddressBook-acknowledgements.plist */,
+				01CD6EDF6D0A59057C56B0BB359CB7E6 /* Pods-JKAddressBook-dummy.m */,
+				E0ADB749ED5FF611B6B866162258D42A /* Pods-JKAddressBook-frameworks.sh */,
+				E90FF2DCC52620815BA552E01591462F /* Pods-JKAddressBook-resources.sh */,
+				5CDB48853259D1C22633EE9CEBD2C5E4 /* Pods-JKAddressBook-umbrella.h */,
+				81878BE181CB4C969CBFBAF908F9BADE /* Pods-JKAddressBook.debug.xcconfig */,
+				A7DDB5698A2726AC1A066718D772CE61 /* Pods-JKAddressBook.release.xcconfig */,
+			);
+			name = "Pods-JKAddressBook";
+			path = "Target Support Files/Pods-JKAddressBook";
+			sourceTree = "<group>";
+		};
+		63C1A4AFF253AB9C2A2E180155423D4B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3688418EA13623BA93BE90E5B0E23BA4 /* Pods-JKAddressBook */,
+				0BCE9C8A48B249AD31F7E0100D8D5B77 /* Pods-JKAddressBookTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				E773BBEE68AD3D288B9085270AD93D46 /* Pods */,
+				987E4D5FBA94F3597281A2002BC41D75 /* Products */,
+				63C1A4AFF253AB9C2A2E180155423D4B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		82AC5F21BE57B6FA151A25CD64AAA78A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0B180080911B935E92872F77A897FAFE /* Info.plist */,
+				A4959F7D0AC34451F8F2693017ECDE72 /* Kanna.modulemap */,
+				520CAC0FB85BFAD931ED0DA659863A89 /* Kanna.xcconfig */,
+				AD24835E8019F7BC39EC2868AFF173AE /* Kanna-dummy.m */,
+				927BA1E68F56C86892E57625EF7973C6 /* Kanna-prefix.pch */,
+				62956F9FEBBF4BDDAC06E77B633BF608 /* Kanna-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kanna";
+			sourceTree = "<group>";
+		};
+		987E4D5FBA94F3597281A2002BC41D75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4510C6195F7CFE9A376CE0630A54AB9 /* Kanna.framework */,
+				84C06C6496742A0EB441F2519232DF8F /* Pods_JKAddressBook.framework */,
+				A108CA40835F5A02C94D168790B9EA6A /* Pods_JKAddressBookTests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E773BBEE68AD3D288B9085270AD93D46 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18010144FBE0C43B9E02E6401776070A /* Kanna */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2756D7E390B2BA31817FDD05D57F2B23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9484B6E2A8FDBDB9D7B559929C955F49 /* Pods-JKAddressBook-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60EE19E94CCC8B2987D34DD9FFE5E95F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8065C6476C061E6D93848B90D6B1A167 /* Pods-JKAddressBookTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6ED58E2AC513CA857896D394B7F4FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A779BBA2C2287D59F90515A0B115505 /* dict.h in Headers */,
+				7F16909E2201010666A8C7D459EEB341 /* encoding.h in Headers */,
+				F97D822A42CCE194E6941CDDE465A8F1 /* entities.h in Headers */,
+				5025378D1DFC21104B5A6F40F5120C60 /* globals.h in Headers */,
+				65D973634B5A725E6E9DB26E76A5984D /* hash.h in Headers */,
+				76B3882D79A9E9398A59EFDC27D3B2D8 /* HTMLparser.h in Headers */,
+				2C6F31CA5077DEBFB4DE71CB35D01DD2 /* HTMLtree.h in Headers */,
+				42F4A2114903AC548BEB47FA079388EB /* Kanna-umbrella.h in Headers */,
+				690200F751F62B856B5CB8720F7B9C1A /* Kanna.h in Headers */,
+				7753BBF9C9A68A791878D8674C7B75B0 /* list.h in Headers */,
+				52DE3E4DADE7B531139EABE65FF85E3A /* parser.h in Headers */,
+				786FC5EFFF66FB55526D981DF93AC717 /* SAX.h in Headers */,
+				0B2A158247157B59BE852F5E27A959FF /* SAX2.h in Headers */,
+				F7D5D03096B5068B9EB17015C9EC32D5 /* threads.h in Headers */,
+				FD877092D437C710096114B56D57740F /* tree.h in Headers */,
+				F8DF0EA4B7C34511BE363F8646DA27D9 /* valid.h in Headers */,
+				8D5E683C66C3759D10E4B5CACBCC894B /* xlink.h in Headers */,
+				5BA7263C6950A5445A1E05D6ED9B9B0C /* xmlautomata.h in Headers */,
+				78E93E9519DE5BEFD45A2E11EFB036D7 /* xmlerror.h in Headers */,
+				BEAFBA9BA699C5F1366E622412034BE3 /* xmlexports.h in Headers */,
+				C0302D845167AEE0D498511946066ECC /* xmlIO.h in Headers */,
+				6A184B977475575065B9D4EB805E622E /* xmlmemory.h in Headers */,
+				40B6493D6716266C1798DA37C421E5AC /* xmlregexp.h in Headers */,
+				4611D0779F7075230C6EC0039061E5EB /* xmlstring.h in Headers */,
+				D8E42FB4CDFAE03DFF08FAA88E0EBF6D /* xmlversion.h in Headers */,
+				7334D8E15C92F020DDA001E668E5A8A1 /* xpath.h in Headers */,
+				DF783166AE3BC0A09D31D5CD9FE82394 /* xpathInternals.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		13DA228024BE3E0FB05D1B36365B5CD0 /* Pods-JKAddressBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22D8D08030C1E129AEB450DA12EC6051 /* Build configuration list for PBXNativeTarget "Pods-JKAddressBookTests" */;
+			buildPhases = (
+				F18B734B27288D83BE3CB01125206DFA /* Sources */,
+				1DA32D32235EF5C507A3B8200E578599 /* Frameworks */,
+				60EE19E94CCC8B2987D34DD9FFE5E95F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1610179769ED844A2F0A1426DC292C4C /* PBXTargetDependency */,
+			);
+			name = "Pods-JKAddressBookTests";
+			productName = "Pods-JKAddressBookTests";
+			productReference = A108CA40835F5A02C94D168790B9EA6A /* Pods_JKAddressBookTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		737DCAB06BDFB6282303578885704804 /* Pods-JKAddressBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E10EAA43BBFF336B5EEC0200958C84 /* Build configuration list for PBXNativeTarget "Pods-JKAddressBook" */;
+			buildPhases = (
+				3F70BF00CC9CC5ECA73435768A90A17D /* Sources */,
+				B2CA3162E5304F9580955B2ADC723C30 /* Frameworks */,
+				2756D7E390B2BA31817FDD05D57F2B23 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F683C4C69C178EDD1A367C98D0DB8EFD /* PBXTargetDependency */,
+			);
+			name = "Pods-JKAddressBook";
+			productName = "Pods-JKAddressBook";
+			productReference = 84C06C6496742A0EB441F2519232DF8F /* Pods_JKAddressBook.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9E26363B73022A679DE4E50CFF38138A /* Kanna */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3621C8298DD42FC5F2267B5AE62302B /* Build configuration list for PBXNativeTarget "Kanna" */;
+			buildPhases = (
+				E9C05E8CDFD1630F66E5FF98E60F971D /* Sources */,
+				9CF230CC0385458CE1A80751303D579C /* Frameworks */,
+				AC6ED58E2AC513CA857896D394B7F4FE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kanna;
+			productName = Kanna;
+			productReference = A4510C6195F7CFE9A376CE0630A54AB9 /* Kanna.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 987E4D5FBA94F3597281A2002BC41D75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E26363B73022A679DE4E50CFF38138A /* Kanna */,
+				737DCAB06BDFB6282303578885704804 /* Pods-JKAddressBook */,
+				13DA228024BE3E0FB05D1B36365B5CD0 /* Pods-JKAddressBookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F70BF00CC9CC5ECA73435768A90A17D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				674F085B38CD41ABCF9984E52A0E6986 /* Pods-JKAddressBook-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9C05E8CDFD1630F66E5FF98E60F971D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A0F98EDF6A74D4905BE61503B9D9239 /* CSS.swift in Sources */,
+				97204E6710C3A6F5848B872133454879 /* HTMLParser.swift in Sources */,
+				D3A6F4DB33417466B2D4873191449D0C /* Kanna-dummy.m in Sources */,
+				C499D9ED7CBF067A345A2E4E9A543954 /* Kanna.swift in Sources */,
+				295B66DE388FBF2B6BA728D16E571C57 /* libxmlHTMLDocument.swift in Sources */,
+				874655FB27DAC01E12CF9B8B16C1F22D /* libxmlHTMLNode.swift in Sources */,
+				1B316CEEAD6FD3120AD7899C3B2E4101 /* libxmlParserOption.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F18B734B27288D83BE3CB01125206DFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A166D60940A0028C5BE0D72A899FCB /* Pods-JKAddressBookTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1610179769ED844A2F0A1426DC292C4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kanna;
+			target = 9E26363B73022A679DE4E50CFF38138A /* Kanna */;
+			targetProxy = FB3FA91C38724F5C5F0CD75F0FFBD2D0 /* PBXContainerItemProxy */;
+		};
+		F683C4C69C178EDD1A367C98D0DB8EFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kanna;
+			target = 9E26363B73022A679DE4E50CFF38138A /* Kanna */;
+			targetProxy = A6BB98CD25FBB14E3765EC54F949A27B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		442E0DA41A2332FE3BE7A544BF612C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7DDB5698A2726AC1A066718D772CE61 /* Pods-JKAddressBook.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JKAddressBook/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JKAddressBook/Pods-JKAddressBook.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_JKAddressBook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6294F82FCC7F4D75006F4966603B8263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520CAC0FB85BFAD931ED0DA659863A89 /* Kanna.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kanna/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Kanna;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		69BB3948120FA195FB3AD7DADFDD44CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1FD73DE0AD7DE415FBD131B738FA8F4 /* Pods-JKAddressBookTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JKAddressBookTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JKAddressBookTests/Pods-JKAddressBookTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_JKAddressBookTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E0B0348711FC5711DD9952645EEA3508 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81878BE181CB4C969CBFBAF908F9BADE /* Pods-JKAddressBook.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JKAddressBook/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JKAddressBook/Pods-JKAddressBook.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_JKAddressBook;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F58B7A97F830A5641F216D096916E678 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520CAC0FB85BFAD931ED0DA659863A89 /* Kanna.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kanna/Kanna-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kanna/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kanna/Kanna.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Kanna;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FD338A407BA02A58B1F4D91F83CEF11E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A69F7B437AB2BE6F208982F09DAFC0A5 /* Pods-JKAddressBookTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-JKAddressBookTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JKAddressBookTests/Pods-JKAddressBookTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_JKAddressBookTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22D8D08030C1E129AEB450DA12EC6051 /* Build configuration list for PBXNativeTarget "Pods-JKAddressBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FD338A407BA02A58B1F4D91F83CEF11E /* Debug */,
+				69BB3948120FA195FB3AD7DADFDD44CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30E10EAA43BBFF336B5EEC0200958C84 /* Build configuration list for PBXNativeTarget "Pods-JKAddressBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0B0348711FC5711DD9952645EEA3508 /* Debug */,
+				442E0DA41A2332FE3BE7A544BF612C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3621C8298DD42FC5F2267B5AE62302B /* Build configuration list for PBXNativeTarget "Kanna" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F58B7A97F830A5641F216D096916E678 /* Debug */,
+				6294F82FCC7F4D75006F4966603B8263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
